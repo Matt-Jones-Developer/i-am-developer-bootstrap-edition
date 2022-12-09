@@ -1,0 +1,344 @@
+/* custom bootstrap css */
+
+/* variables */
+
+:root {
+    --dark: #333333;
+    --light: #fff;
+    --highlight: #74FBB5;
+    --hover: #fff;
+    --hover-span: orange;
+    --box-shadow: rgba(0, 0, 0, 0.8);
+    --bg-grey: #BCBEC3;
+    --peachy: #F3AEAC;
+    --peachier: #EA655D;
+    --purps: #A5ACF5;
+    --aqua: #74FBB5;
+    --lumi: #c0fa62;
+    --gradient: linear-gradient(45deg,
+            rgba(54, 54, 54, 0.8) 0%,
+            rgba(88, 88, 88, 0.7) 100%);
+    --gradient-light: linear-gradient(45deg,
+            rgba(158, 158, 158, 0.8) 0%,
+            rgba(255, 255, 255, 0.7) 100%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* --bs-body-font-family: var(--bs-font-monospace);
+    --bs-body-line-height: 1.4; */
+    /* doc says no need to create new rules, just edit values? - but his doesn't work */
+    /* --bs-body-bg: var(--bs-gray-100); */
+    background-image: var(--gradient);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    color: var(--light);
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+span:hover {
+    color: var(--hover-span);
+    cursor: pointer;
+}
+
+em {
+    color: var(--highlight);
+}
+
+hr {
+    opacity: 0;
+}
+
+.custom-hr {
+    /* background-color: var(--light); */
+    margin: 1rem 0;
+    /* color: var(--light);
+    border: 0; */
+    opacity: 1;
+    
+}
+
+.custom-b {
+    color: var(--highlight);
+}
+
+/* this DOES work! */
+.custom-body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-grey);
+    /* gradient wont work!? */
+    /* background-color: var(--gradient); */
+}
+
+/* navbar */
+
+#logo {
+    width: 50px;
+    height: 50px;
+}
+
+.custom-navbar-brand {
+    color: var(--light);
+    align-items: center;
+    animation: easeInOutLeft 2s;
+    /* margin-left: 1rem; */
+    /* border: 1px solid red; */
+}
+
+.custom-navbar-brand:hover {
+    color: var(--highlight);
+}
+
+/* brand text */
+
+.custom-navbar-brand img {
+    width: 40px;
+    height: 40px;
+}
+
+/* custom hamburger */
+.custom-toggler {
+    background-color: #333;
+    margin-right: .5rem;
+}
+
+/* custom hamburger */
+.hamburger {
+    color: var(--light);
+}
+
+.custom-nav-item {
+    color: var(--light);
+    margin-top: .7rem;
+    font-size: 1rem;
+}
+
+/* set color on items focus */
+/* .custom-nav-item:focus {
+    color: var(--highlight);
+} */
+
+.custom-nav-item:hover {
+    color: var(--highlight);
+}
+
+/* navbar animations */
+
+.nav-anim {
+    animation-name: slideDown;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    -webkit-animation-name: slideDown;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: none;
+}
+
+.nav-right {
+    animation: fadeIn 2s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+#links {
+    margin-right: 1rem;
+}
+
+/* header / hero */
+
+.container {
+    margin: 0 auto;
+}
+
+.jumbo-custom-top,
+.jumbo-custom-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(40vh - .5rem);
+    /* border: 1px solid red; */
+}
+
+/* .jumbo-custom-bottom {
+    margin: 0 auto;
+    border: 1px solid red;
+} */
+
+.header-hero .container {
+    display: flex;
+    justify-content: center;
+    margin-top: -1rem;
+}
+
+/* jumbotron custom top */
+/* hero-anim squares */
+
+.bg-grid-container {
+    animation: fadeIn 15s;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 3px;
+    width: 100vw;
+    height: 250px;
+    padding: 2rem;
+    padding-bottom: 4rem;
+    z-index: -1;
+}
+
+.bg-grid-container>* {
+    border: 1px solid black;
+}
+
+.grid-item {
+    width: 4rem;
+    height: 2rem;
+}
+
+#aqua {
+    background-color: var(--highlight);
+    animation: colourFade 2.3s ease alternate infinite;
+}
+
+#peach {
+    background-color: var(--peachy);
+    animation: colourFade 3.5s ease alternate infinite;
+}
+
+#purple {
+    background-color: var(--purps);
+    animation: colourFade 3s ease alternate infinite;
+}
+
+#lumi {
+    background-color: var(--lumi);
+    animation: colourFade 2.8s ease alternate infinite;
+}
+
+/* jumbotron custom bottom */
+
+/* .jumbo-bottom {
+    
+} */
+
+.h1-custom {
+    margin-bottom: 1rem;
+    font-size: 80px;
+}
+
+.btn {
+    background-color: var(--lumi);
+}
+
+.btn:hover {
+    background-color: var(--purps);
+}
+
+.jumbo-bottom {
+    margin: 2rem;
+}
+
+/* main */
+
+/* about section */
+
+.heading {
+    margin-bottom: 2rem;
+}
+
+.card-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-left {
+    padding-top: 1rem;
+    text-align: left;
+}
+
+.card-body img {
+    justify-self: center;
+    text-align: center;
+}
+
+.card-subtitle {
+    margin-bottom: 1rem;
+}
+
+.link-colour {
+    color: var(--lumi);
+}
+
+.link-colour:hover {
+    color: var(--peachy);
+}
+
+.link-colour-2 {
+    color: var(--purps);
+}
+
+.link-colour-2:hover {
+    color: var(--peachy);
+}
+
+/* .sub-text {
+    color: var(--light);
+} */
+
+
+/* responsive media queries */
+
+.h1-custom {
+    font-size: 48px;
+}
+
+.header-hero {
+    margin: -2rem -2rem;
+}
+
+.jumbo-custom-bottom {
+    margin-top: 4rem;
+}
