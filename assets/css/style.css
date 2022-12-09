@@ -91,7 +91,7 @@ hr {
     /* color: var(--light);
     border: 0; */
     opacity: 1;
-    
+
 }
 
 .custom-b {
@@ -202,10 +202,10 @@ hr {
     /* border: 1px solid red; */
 }
 
-/* .jumbo-custom-bottom {
+.jumbo-custom-bottom {
     margin: 0 auto;
-    border: 1px solid red;
-} */
+    scale: 1.1;
+}
 
 .header-hero .container {
     display: flex;
@@ -327,6 +327,101 @@ hr {
 /* .sub-text {
     color: var(--light);
 } */
+
+/* projects section */
+
+/*  section - projects */
+
+project-boxes .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* projects grid */
+
+.grid-container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 500px 300px 300px 300px;
+    gap: 5rem 1rem;
+    grid-template-areas:
+        "studyguide studyguide studyguide"
+        "studyguide studyguide studyguide"
+        "rpk gameboy pools"
+        "bio horiseon survey";
+}
+
+.project-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    
+}
+
+.project-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    align-items: center;
+    cursor: pointer;
+    display: grid;
+    align-content: end;
+
+}
+
+/* grid areas */
+
+#studyguide {
+    grid-area: studyguide;
+}
+
+#rpk {
+    grid-area: rpk;
+}
+
+#gameboy {
+    grid-area: gameboy;
+}
+
+#pools {
+    grid-area: pools;
+}
+
+#bio {
+    grid-area: bio;
+}
+
+#horiseon {
+    grid-area: horiseon;
+}
+
+#survey {
+    grid-area: survey;
+}
+
+.project-heading {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    height: 4rem;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 0 1rem 0 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* responsive media queries */
