@@ -13,7 +13,40 @@ I found learning Bootstrap fairly straight-forward, it's drag and drop design of
 I initially struggled with the modal and form sections, but overcame them after a quick revisit on how it's done.
 I decided to add a call to action button within my header that would allow users to quickly get in touch with me, raising it's importance as per the UX heirachy document I created. 
 
-Issues using V5 and updating everything so it worked:
+
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Bootstrap-Issues](#bootstrap-issues)
+* [UI-Design-Features](#ui-design-features)
+* [Wireframing](#wireframing)
+* [License](#license)
+* [Badges](#badges)
+
+
+## Installation
+
+The bootstrapped portfolio is deployed so no further installation requirements.
+
+Links to each project are provided through each projects link text. I wish I'd had time to refactor all of my other projects code too, but I will.
+
+For the Python project, you will need to download the repo, install the correct python version (I like pyenv with a virtual environment) and then add the dependencies via requirements.txt on your system - instructions are provided.  I plan to make this game fully UI based in the future, complete with animations and a live leaderboard!
+
+
+## Usage
+
+To view the deployed portfolio, please go to: https://matt-jones-developer.github.io/i-am-developer-bootstrap-edition/
+
+The link for this repo: https://github.com/Matt-Jones-Developer/i-am-developer-bootstrap-edition/
+
+*screenshots of the homepage*
+![This is a screenshot](/assets/images/demo/bootstrap-edition_screenshot.png)
+
+
+## Bootstrap-Issues
+
+I had some issues using V5 and updating everything so it worked:
 
 I decided to install V5 via npm.  I also started with the template file, just to check everything was working.  To my surprise the modal button wasn't.  After a quick search I discovered they had not correctly updated the starter code, so I switched out data-toggle for data-bs-toggle, data-target for data-bs-target and data-dismiss to data-bs-dismiss.
 
@@ -21,9 +54,9 @@ I also set the link for the css using the supplied version and added the js popp
 
 I also had 3 severe vulnerability warnings when updating npm from my previous version.  I ran npm audit fix --force to fix these.  I ran into unresolved warnings here so I applied:
 
-Couple of npm commands that will help you audit your packages before upgrading:
+Couple of npm commands that help audit packages before upgrading:
 
-npm list --depth 0 lists all packages at the top level:
+- npm list --depth 0 lists all packages at the top level:
 
 ├── autoprefixer@10.4.13
 ├── bootstrap-icons@1.10.2
@@ -43,7 +76,7 @@ npm list --depth 0 lists all packages at the top level:
 
 npm audit checks for security vulnerabilities or out-of-date versions:
 
-# npm audit report
+- npm audit report
 
 glob-parent  <5.1.2
 Severity: high
@@ -58,7 +91,7 @@ node_modules/glob-parent
     node_modules/live-server
 
 
-npm outdated lists report of package versions compared to versions specified in package.json file
+- npm outdated lists report of package versions compared to versions specified in package.
 
 glitchy81@Matts-MacBook-Pro bootstrap-npm-starter % npm outdated
 Package                          Current  Wanted  Latest  Location                                      Depended by
@@ -77,33 +110,16 @@ The severity warnings were still present.
 I ran npm update.
 I then uninstalled node-sass, purgecss and sytlelint I ran npm outdated and it returned clean.  So I attempted to reinstall these 3.  Ran npm outdated again - clean!
 
-I checked 
-## Table of Contents
+I checked for warnings again and they're still present sadly!  But hey, I tried.
 
-* [Installation](#installation)
-* [Usage](#usage)
-* [Mock-up-Design](#mock-up-design)
-* [License](#license)
-* [Badges](#badges)
+I deployed the test app to make sure the bootstrap npm dist was working and seems to be all good.
 
-## Installation
+I feel it's cleaner, more professional than the basic links and confusing amount of different scripts (different versions too) which initially caused bootstrap to fail.
 
-Links to each project are provided through each projects link text. I wish I'd had time to refactor all of my other projects code too, but I will.
-
-For the Python project, you will need to download the repo, install the correct python version (I like pyenv with a virtual environment) and then add the dependencies via requirements.txt on your system - instructions are provided.  I plan to make this game fully UI based in the future, complete with animations and a live leaderboard!
+I will always include the dist node files and folders in future bootstrapping.
 
 
-## Usage
-
-To view the deployed portfolio, please go to: https://matt-jones-developer.github.io/i-am-developer-bootstrap-edition/
-
-The link for this repo: https://github.com/Matt-Jones-Developer/i-am-developer-bootstrap-edition/
-
-*screenshots of the homepage*
-![This is a screenshot](/assets/images/demo/bootstrap-edition_screenshot.png)
-
-
-## Design & Features
+## UI-Design-Features
 
 When I first set out in designing my original portfolio I had many ideas that I didn't implement so I wanted to try to add more for this version.
 
@@ -135,7 +151,7 @@ I will endeavour to include the following goals for this project:
 
 - responsive screenshots embedded/skewed into iphone images! - TODO - When you click on a project image, I'd like it to open a page dedicated to how and why the site was made, the issues I overcame and screenshots of it's responsive design in mobile view.
 
-## Mock-up Design
+## Wireframing
 
 mockup - here are my wireframes and design mockups I created before coding - I ended up reverting back to the original design to meet the criteria but still included the gameboy slide reel inside my gameboy assets website.
 
