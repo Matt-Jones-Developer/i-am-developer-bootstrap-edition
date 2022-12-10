@@ -21,6 +21,7 @@
     --gradient-light: linear-gradient(45deg,
             rgba(158, 158, 158, 0.8) 0%,
             rgba(255, 255, 255, 0.7) 100%);
+    --shadow: 10px 10px rgba(66,66,66,0.5);
 }
 
 html {
@@ -28,10 +29,11 @@ html {
 }
 
 body {
+     /* doc says no need to create new rules, just edit values? - but his doesn't work */
     /* --bs-body-font-family: var(--bs-font-monospace);
     --bs-body-line-height: 1.4; */
-    /* doc says no need to create new rules, just edit values? - but his doesn't work */
     /* --bs-body-bg: var(--bs-gray-100); */
+    /* these work fine */
     background-image: var(--gradient);
     font-family: 'Raleway', sans-serif;
     font-size: 1.2rem;
@@ -68,9 +70,10 @@ a:hover {
     text-decoration: none;
 }
 
-a:active {
+/* a:active {
     text-decoration: none;
-}
+    color: var(--highlight);
+} */
 
 span:hover {
     color: var(--hover-span);
@@ -98,7 +101,7 @@ hr {
     color: var(--highlight);
 }
 
-/* this DOES work! */
+/* this DOES work! need to consolidate one or the other*/
 .custom-body {
     padding: 0;
     margin: 0;
@@ -136,14 +139,14 @@ hr {
 
 /* custom hamburger */
 .custom-toggler {
-    background-color: #333;
+    /* background-color: #333; */
     margin-right: .5rem;
 }
 
 /* custom hamburger */
-.hamburger {
+/* .hamburger {
     color: var(--light);
-}
+} */
 
 .custom-nav-item {
     color: var(--light);
@@ -152,11 +155,12 @@ hr {
 }
 
 /* set color on items focus */
-/* .custom-nav-item:focus {
-    color: var(--highlight);
-} */
+.custom-nav-item:focus {
+    color: var(--purps);
+}
 
-.custom-nav-item:hover {
+.custom-nav-item:hover,
+.custom-nav-item:active {
     color: var(--highlight);
 }
 
@@ -178,9 +182,10 @@ hr {
 }
 
 .nav-right {
-    animation: fadeIn 2s;
+    animation: fadeIn 2s normal backwards;
+    animation-iteration-count: 1;
     animation-delay: 2s;
-    animation-fill-mode: backwards;
+    /* animation-fill-mode: backwards; */
 }
 
 #links {
@@ -202,10 +207,6 @@ hr {
     /* border: 1px solid red; */
 }
 
-.jumbo-custom-bottom {
-    margin: 0 auto;
-    scale: 1.1;
-}
 
 .header-hero .container {
     display: flex;
@@ -260,9 +261,18 @@ hr {
 
 /* jumbotron custom bottom */
 
-/* .jumbo-bottom {
-    
-} */
+
+.jumbo-custom-bottom {
+    padding-top: 4rem;
+    margin: 2rem auto;
+    /* scale: 1.1; */
+}
+
+/* why do we need 2 here? custom too? */
+.jumbo-bottom {
+    margin: 2rem;
+}
+
 
 .h1-custom {
     margin-bottom: 1rem;
@@ -277,21 +287,32 @@ hr {
     background-color: var(--purps);
 }
 
-.jumbo-bottom {
-    margin: 2rem;
-}
-
 /* main */
+
+/* .content {
+    margin: 0 2rem;
+} */
 
 /* about section */
 
+/* .row-cards {
+    justify-content: center;
+    align-items: center;
+} */
+
 .heading {
-    margin-bottom: 2rem;
+    margin: 1rem;
+}
+
+.card {
+    margin: 1rem;
+    box-shadow: var(--shadow);
 }
 
 .card-body {
     padding: 2rem;
     text-align: center;
+    /* background-color: transparent; */
 }
 
 .card-left {
@@ -303,6 +324,11 @@ hr {
     justify-self: center;
     text-align: center;
 }
+
+/* .custom-card-body {
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: .5;
+} */
 
 .card-subtitle {
     margin-bottom: 1rem;
@@ -324,122 +350,29 @@ hr {
     color: var(--peachy);
 }
 
-/* .sub-text {
-    color: var(--light);
-} */
-
-/* projects section */
-
-/* .page-section {
-    padding: 0 1rem;
-    margin: 1rem auto;
-    border: 1px blue solid;
-  } */
-
-/*  section - projects */
-
-/* project-boxes .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-/* projects grid */
-
-/* .grid-container {
-    border: 1px solid red;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 500px 300px 300px 300px;
-    gap: .5rem;
-    grid-template-areas:
-        "studyguide studyguide studyguide"
-        "studyguide studyguide studyguide"
-        "rpk gameboy pools"
-        "bio horiseon survey";
-} */
-
-/* .project-item img {
-    object-fit:contain;
-    width: 100%;
-    
-} */
-
-/* .project-item {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 1rem;
-    align-items: center;
-    cursor: pointer;
-    display: grid;
-    align-content: end;
-
-} */
-
-/* grid areas */
-
-/* #studyguide {
-    grid-area: studyguide;
-}
-
-#rpk {
-    grid-area: rpk;
-}
-
-#gameboy {
-    grid-area: gameboy;
-}
-
-#pools {
-    grid-area: pools;
-}
-
-#bio {
-    grid-area: bio;
-}
-
-#horiseon {
-    grid-area: horiseon;
-}
-
-#survey {
-    grid-area: survey;
-} */
-
-.project-heading {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 1rem;
-    height: 4rem;
-    color: white;
-    font-size: 1.2rem;
-    border-radius: 0 1rem 0 1rem;
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 /* responsive media queries */
 
-.h1-custom {
-    font-size: 48px;
+@media screen and (max-width: 768px) {
+    .h1-custom {
+        font-size: 48px;
+    }
+    
+    .header-hero {
+        margin: -2rem -2rem;
+    }
+    
+    .jumbo-custom-bottom {
+        margin-top: 6rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    
+    .jumbo-custom-bottom {
+        margin: 0 auto;
+        scale: 1.0;
+    }
 }
 
-.header-hero {
-    margin: -2rem -2rem;
-}
-
-.jumbo-custom-bottom {
-    margin-top: 4rem;
-}
