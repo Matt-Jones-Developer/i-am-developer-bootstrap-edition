@@ -3,6 +3,7 @@
 /* variables */
 
 :root {
+    --bs-dark: #353A3F;
     --dark: #333333;
     --light: #fff;
     --highlight: #74FBB5;
@@ -16,12 +17,18 @@
     --aqua: #74FBB5;
     --lumi: #c0fa62;
     --gradient: linear-gradient(45deg,
-            rgba(54, 54, 54, 0.8) 0%,
-            rgba(88, 88, 88, 0.7) 100%);
+            rgba(47, 47, 47, 0.8) 0%,
+            rgba(119, 119, 119, 0.7) 100%);
     --gradient-light: linear-gradient(45deg,
             rgba(158, 158, 158, 0.8) 0%,
             rgba(255, 255, 255, 0.7) 100%);
-    --shadow: 10px 10px rgba(66,66,66,0.5);
+    --shadow: 10px 10px rgba(66, 66, 66, 0.5);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -29,11 +36,13 @@ html {
 }
 
 body {
-     /* doc says no need to create new rules, just edit values? - but his doesn't work */
+    /* doc says no need to create new rules, just edit values? - but his doesn't work */
     /* --bs-body-font-family: var(--bs-font-monospace);
     --bs-body-line-height: 1.4; */
     /* --bs-body-bg: var(--bs-gray-100); */
     /* these work fine */
+    position: relative;
+    overflow-x: hidden;
     background-image: var(--gradient);
     font-family: 'Raleway', sans-serif;
     font-size: 1.2rem;
@@ -62,6 +71,7 @@ h2 {
 }
 
 a {
+    /* color: var(--aqua); */
     text-decoration: none;
     list-style-type: none;
 }
@@ -89,7 +99,7 @@ hr {
 }
 
 .custom-hr {
-    /* background-color: var(--light); */
+    background-color: var(--dark);
     margin: 1rem 0;
     /* color: var(--light);
     border: 0; */
@@ -99,16 +109,6 @@ hr {
 
 .custom-b {
     color: var(--highlight);
-}
-
-/* this DOES work! need to consolidate one or the other*/
-.custom-body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background-color: var(--bg-grey);
-    /* gradient wont work!? */
-    /* background-color: var(--gradient); */
 }
 
 /* navbar */
@@ -279,19 +279,21 @@ hr {
     font-size: 80px;
 }
 
-.btn {
+.custom-btn {
     background-color: var(--lumi);
 }
 
-.btn:hover {
+.custom-btn:hover {
     background-color: var(--purps);
 }
 
 /* main */
 
-/* .content {
-    margin: 0 2rem;
-} */
+.page-section {
+    padding: 0 1rem;
+    margin: 2rem auto;
+    /* border: 1px solid red; */
+}
 
 /* about section */
 
@@ -326,8 +328,7 @@ hr {
 }
 
 /* .custom-card-body {
-    background-color: rgba(0, 0, 0, 0.7);
-    opacity: .5;
+    background-color: rgba(66, 66, 66, 0.4);
 } */
 
 .card-subtitle {
@@ -350,6 +351,192 @@ hr {
     color: var(--peachy);
 }
 
+/* section - skills */
+
+/* .page-section {
+    border: 1px solid red;
+} */
+
+.heading-skills {
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+
+.skills-box ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: .5rem;
+    line-height: 2rem;
+    margin-top: 2rem;
+}
+
+.skills-box ul>li {
+    margin: 0 2rem;
+    /* list-style-type: none; */
+    text-align: left;
+}
+
+/* languages and apps logos */
+
+.language-logos {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    padding: .5rem;
+    padding-bottom: 1rem;
+
+}
+
+.language-logos img {
+    width: 70px;
+}
+
+/*  skills s p r e a d  */
+
+#fe {
+    color: var(--aqua);
+}
+
+#be {
+    color: var(--purps);
+}
+
+#vi {
+    color: var(--peachy);
+}
+
+#mp {
+    color: var(--aqua);
+}
+
+#an {
+    color: var(--purps);
+}
+
+
+
+/* section - contact */
+/* 
+
+.contact-box .container {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+    margin: 0 auto;
+    border: 1px solid red;
+} */
+
+/* .contact-text {
+    width: 1200px;
+} */
+
+
+.contact-box ul {
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.contact-box li {
+    color: var(--aqua);
+}
+
+/* .contact-form {
+    width: 400px;
+} */
+
+.custom-text {
+    color: var(--light);
+    opacity: .4;
+}
+
+.signup {
+    text-align: left;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.custom-form-label {
+    margin-top: 1rem;
+}
+
+.custom-btn-form {
+    margin-top: 1rem;
+}
+
+/* contact links */
+
+#gh:hover {
+    color: var(--aqua);
+}
+
+#lk:hover {
+    color: var(--peachy);
+}
+
+#sk:hover {
+    color: var(--purps);
+}
+
+#tw:hover {
+    color: var(--aqua);
+}
+
+#el:hover {
+    color: var(--peachy);
+}
+
+.music-link {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: .5rem 2rem;
+}
+
+#scloud,
+#scloud1 {
+    width: 50px;
+    height: 50px;
+}
+
+/* footer */
+
+.footer {
+    position: relative;
+    top: 4rem;
+    background-color: var(--bs-dark);
+    display: block;
+    text-align: center;
+    padding-top: 3rem;
+    margin: 0 auto;
+
+}
+
+.footer p {
+    padding-bottom: 2rem;
+}
+
+.footer-text {
+    padding: 0px 0px;
+}
+
+.footer em {
+    font-size: 10px;
+}
+
+.footer strong {
+    color: var(--peachier);
+    font-family: monospace;
+    font-size: 18px;
+}
+
+.ul-icons>li {
+    display: inline-block;
+    padding: 1rem 1rem;
+}
 
 
 
@@ -359,20 +546,19 @@ hr {
     .h1-custom {
         font-size: 48px;
     }
-    
+
     .header-hero {
         margin: -2rem -2rem;
     }
-    
+
     .jumbo-custom-bottom {
         margin-top: 6rem;
         margin-left: 2rem;
         margin-right: 2rem;
     }
-    
+
     .jumbo-custom-bottom {
         margin: 0 auto;
         scale: 1.0;
     }
 }
-
