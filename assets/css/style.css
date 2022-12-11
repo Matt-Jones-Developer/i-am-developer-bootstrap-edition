@@ -71,7 +71,6 @@ h2 {
 }
 
 a {
-    /* color: var(--aqua); */
     text-decoration: none;
     list-style-type: none;
 }
@@ -80,10 +79,10 @@ a:hover {
     text-decoration: none;
 }
 
-/* a:active {
-    text-decoration: none;
-    color: var(--highlight);
-} */
+
+span {
+    padding: 0 1rem;
+}
 
 span:hover {
     color: var(--hover-span);
@@ -139,13 +138,35 @@ hr {
 
 /* custom hamburger */
 .custom-toggler {
-    /* background-color: #333; */
-    margin-right: .5rem;
+    color: var(--bs-dark);
+    margin: 1rem;
+    margin-top: .5rem;
 }
 
-/* custom hamburger */
-/* .hamburger {
+/* hamburger toggle */
+
+.navbar-toggler-icon {
+    background-image: none;
+    /* removes bg only - not border? */
+    background-color: var(--bs-dark);
+    /* border-radius: 0;
+    border: none; */
+}
+
+.navbar-toggler-icon::before {
+    font-family: Font Awesome\ 6 Free;
+    content: "\f0c9";
     color: var(--light);
+    font-size: 44px;
+}
+
+.navbar-toggler-icon:hover {
+    color: transparent;
+    background-color: var(--bs-dark);
+}
+
+/* .navbar-toggler-transition {
+    box-shadow: .15s ease-in-out;
 } */
 
 .custom-nav-item {
@@ -184,8 +205,8 @@ hr {
 .nav-right {
     animation: fadeIn 2s normal backwards;
     animation-iteration-count: 1;
-    animation-delay: 2s;
-    /* animation-fill-mode: backwards; */
+    /* cannot delay ue to hamburger!! */
+    /* animation-delay: 2s; */
 }
 
 #links {
@@ -353,13 +374,17 @@ hr {
 
 /* section - skills */
 
+.apps {
+    padding-top: 5rem;
+}
+
 /* .page-section {
     border: 1px solid red;
 } */
 
 .heading-skills {
     padding-left: 2rem;
-    padding-top: 2rem;
+    padding-top: 4rem;
 }
 
 .skills-box ul {
@@ -418,36 +443,29 @@ hr {
 
 
 /* section - contact */
-/* 
 
-.contact-box .container {
-    display: grid;
-    grid-template-columns: 75% 25%;
-    grid-template-rows: 1fr;
-    justify-content: space-between;
-    margin: 0 auto;
-    border: 1px solid red;
-} */
 
-/* .contact-text {
-    width: 1200px;
-} */
-
+.heading-contact {
+    padding-left: 1rem;
+    padding-top: 4rem;
+}
 
 .contact-box ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    text-align: center;
     text-decoration: none;
     list-style-type: none;
 }
 
 .contact-box li {
-    color: var(--aqua);
+    padding-right: 1rem;
 }
 
-/* .contact-form {
-    width: 400px;
+/* .contact-box li:last-child {
+    padding-right: 0;
 } */
+
 
 .custom-text {
     color: var(--light);
@@ -459,34 +477,36 @@ hr {
     margin: 0 auto;
     padding: 0 1rem;
 }
-.custom-form-label {
-    margin-top: 1rem;
-}
 
+.custom-form-label,
 .custom-btn-form {
     margin-top: 1rem;
 }
 
 /* contact links */
 
-#gh:hover {
+#gh a:hover {
     color: var(--aqua);
 }
 
-#lk:hover {
+#lk a:hover {
     color: var(--peachy);
 }
 
-#sk:hover {
+#sk a:hover {
     color: var(--purps);
 }
 
-#tw:hover {
+#tw a:hover {
     color: var(--aqua);
 }
 
-#el:hover {
+#el a:hover {
     color: var(--peachy);
+}
+
+#cv a:hover {
+    color: var(--purps);
 }
 
 .music-link {
@@ -498,8 +518,9 @@ hr {
 
 #scloud,
 #scloud1 {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
+
 }
 
 /* footer */
@@ -510,14 +531,14 @@ hr {
     background-color: var(--bs-dark);
     display: block;
     text-align: center;
-    padding-top: 3rem;
+    padding-top: 2rem;
     margin: 0 auto;
 
 }
 
-.footer p {
+/* .footer p {
     padding-bottom: 2rem;
-}
+} */
 
 .footer-text {
     padding: 0px 0px;
@@ -543,6 +564,15 @@ hr {
 /* responsive media queries */
 
 @media screen and (max-width: 768px) {
+
+    /* adjust header center */
+
+    .bg-grid-container {
+        padding: 2rem 0;
+        margin-right: 5px;
+        gap: 2px;
+    }
+
     .h1-custom {
         font-size: 48px;
     }

@@ -7,6 +7,10 @@ import "../../node_modules/bootstrap/js/dist/util.js";
 import "../../node_modules/bootstrap/js/dist/modal.js";
 const bootstrap = require('bootstrap')
 
+// hide toggle ?
+
+// const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle:false})
+
 // stop navlink animations repeating on hover
 const startPage = (() => {
     const html = document.documentElement,

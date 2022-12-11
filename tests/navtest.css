@@ -1,0 +1,20 @@
+.header {
+    height: 100vh;
+    background-color: beige;
+}
+
+
+#features {
+    height: 100vh;
+    background-color: aquamarine;
+}
+
+#pricing {
+    height: 100vh;
+    background-color: orange;
+}
+
+#contact {
+    height: 100vh;
+    background-color: gray;
+}

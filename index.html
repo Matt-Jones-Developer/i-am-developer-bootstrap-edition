@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,800,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,800,900">
+    <!-- font-awesome icons -->
+    <link href="./assets/fontawesome-free-6.2.1-web/css/solid.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="./assets/images/svg/icons/icn_code_blocks_wht.svg">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -16,10 +18,10 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <!-- add javascript file -->
-    <!-- <script defer src="./assets/js/starter.js"></script> -->
+    <script defer src="./assets/js/starter.js"></script>
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="assets/css/starter.css">
-    <link rel="stylesheet" href="assets/css/starter.css.map">
+    <link rel="stylesheet" href="./assets/css/starter.css">
+    <link rel="stylesheet" href="./assets/css/starter.css.map">
     <!-- my custom stylesheets -->
     <link rel="stylesheet" href="./assets/css/anims.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -29,22 +31,22 @@
 <body>
 
     <!-- Navbar with sticky top -->
-    <nav class="navbar bg-dark sticky-top navbar-expand-md nav-anim">
+    <!-- <nav class="navbar bg-dark sticky-top navbar-expand-lg nav-anim"> -->
+    <nav class="navbar navbar-expand-lg bg-dark sticky-top nav-anim">
         <div class="container-fluid">
-            <a class="navbar-brand custom-navbar-brand" href="#">
+            <a class="navbar-brand custom-navbar-brand" href="index.html">
                 <!-- logo -->
                 <img src="./assets/images/svg/icons/icn_code_blocks_wht.svg" alt="Logo" width="30" height="28"
                     class="d-inline-block align-text-center" id="logo">
                 i am developer
             </a>
-            <!-- CTA button & script -->
-            <button class="navbar-toggler bg-light custom-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon hamburger"></span>
+            <!-- hamburger toggle -->
+            <button class="navbar-toggler ms-2 bg-dark navbar-toggler-transition custom-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse nav-right" id="navbarSupportedContent" data-bs-toggle="collapse"
-                data-bs-target=".navbar-collapse">
+            <!-- navbar links -->
+            <div class="collapse navbar-collapse nav-right" id="navbarNav">
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active-dark custom-nav-item" aria-current="page" href="index.html">home</a>
@@ -297,83 +299,86 @@
     <!-- main -->
     <main class="main">
         <!-- main body -->
-        <div class="col-lg 12 col-md-10 py-5 px-3 mx-auto">
-            <div class="container-fluid">
-                <!-- spyscroll settings -->
-                <section class="pb-3 mb-5 page-section" id="about" data-bs-spy="scroll" data-bs-target="#about"
-                    data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
-                    <h1 class="heading">Web Developer | UX UI Designer</h1>
-                    <!-- cards -->
-                    <div class="row">
-                        <div class="card-container col-lg-8 col-md-6 col-sm-12">
-                            <div class="card bg-dark">
-                                <div class="card-body card-left">
-                                    <h2 class="card-title">Professional Journey</h2>
-                                    <h6 class="card-subtitle mb-2 text-muted">Why you should you hire me</h6>
-                                    <p class="card-text">
-                                        Hello World! My name is Matt Jones and I am a passionate web developer and
-                                        designer.
-                                        <br>
-                                        I love coding, problem-solving and building unique projects from the
-                                        <em><b>wild ideas</b></em> that keep me up at night!<br>
-                                        <br>
-                                        Learning is never ending; new coding skills, exploring new territories...
-                                        I am constantly developing and building <em><b>creative things.</b></em>
-                                        I have studied Python for a number of years which taught me how to
-                                        think like a programmer and gave me an excellent foundation
-                                        upon which to understand both <em><b>front and back-end
-                                                development.</b></em><br>
-                                        <br>
-                                        Prior to being a developer, I was the founder & CEO of a music technology
-                                        company
-                                        working with schools, youth centres and prisons in the UK for 10 years.
-                                        I would say my background is fairly unique in that I have always had to
-                                        break the mold to <em><b>carve my own path</b></em> to success.
-                                    </p>
-                                    <a href="#contact" class="card-link link-colour"><b>Arrange Meeting</b></a>
-                                    <a href="#skills" class="card-link link-colour-2">Find out more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- image card -->
-                        <div class="card-container col-lg-4 col-md-12 col-sm-12">
-                            <div class="card bg-dark">
-                                <div class="card-body">
-                                    <img src="./assets/images/png/MJones_circle_Img.png" alt="selfie" id="photo">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end about section -->
-                </section>
+        <!-- does this need a jumbotron wrap - as per criteria? -->
+        <div class="jumbotron">
+            <!-- main container -->
+            <div class="col-lg 12 col-md-10 py-5 px-3 mx-auto">
                 <div class="container-fluid">
-                    <h2 class="heading">Languages & Applications</h2>
-                    <br>
-                    <div class="row">
-                        <div class="skills-box">
-                            <!-- logos row -->
-                            <div class="language-logos">
-                                <img src="./assets/images/svg/logos/Coder-Logo.png" alt="code-squid-logo" id="squid">
-                                <img src="./assets/images/svg/logos/html5_lg.svg" alt="html5-logo" id="html5">
-                                <img src="./assets/images/svg/logos/css3_lg.svg" alt="css-logo" id="css">
-                                <img src="./assets/images/svg/logos/js_lg.svg" alt="js-logo" id="js">
-                                <img src="./assets/images/svg/logos/github_purple_lg.svg" alt="github-icon" id="git">
-                                <img src="./assets/images/svg/logos/python-logo.png" alt="python-logo" id="py">
-                                <img src="./assets/images/svg/logos/flask-logo-png-transparent.png" alt="flask-logo"
-                                    id="fl">
-                                <img src="./assets/images/svg/logos/mongodb.png" alt="mongodb-logo" id="db">
-                                <img src="./assets/images/svg/logos/vscode_logo.png" alt="vscode-logo" id="vs">
-                                <img src="./assets/images/svg/logos/inkscape_logo.png" alt="inkscape-logo" id="ink">
-                                <img src="./assets/images/svg/logos/ableton_live.png" alt="ableton-logo" id="live">
-                                <img src="./assets/images/svg/logos/logic_pro_logo.png" alt="logic-pro-logo" id="log">
+                    <!-- spyscroll settings -->
+                    <section class="pb-3 mb-5 page-section" id="about" data-bs-spy="scroll" data-bs-target="#about"
+                        data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+                        <h1 class="heading">Web Developer | UX UI Designer</h1>
+                        <!-- cards -->
+                        <div class="row">
+                            <div class="card-container col-lg-8 col-md-6 col-sm-12">
+                                <div class="card bg-dark">
+                                    <div class="card-body card-left">
+                                        <h2 class="card-title">Professional Journey</h2>
+                                        <h6 class="card-subtitle mb-2 text-muted">Why you should you hire me</h6>
+                                        <p class="card-text">
+                                            Hello World! My name is Matt Jones and I am a passionate web developer and
+                                            designer.
+                                            <br>
+                                            I love coding, problem-solving and building unique projects from the
+                                            <em><b>wild ideas</b></em> that keep me up at night!<br>
+                                            <br>
+                                            Learning is never ending; new coding skills, exploring new territories...
+                                            I am constantly developing and building <em><b>creative things.</b></em>
+                                            I have studied Python for a number of years which taught me how to
+                                            think like a programmer and gave me an excellent foundation
+                                            upon which to understand both <em><b>front and back-end
+                                                    development.</b></em><br>
+                                            <br>
+                                            Prior to being a developer, I was the founder & CEO of a music technology
+                                            company
+                                            working with schools, youth centres and prisons in the UK for 10 years.
+                                            I would say my background is fairly unique in that I have always had to
+                                            break the mold to <em><b>carve my own path</b></em> to success.
+                                        </p>
+                                        <a href="#contact" class="card-link link-colour"><b>Arrange Meeting</b></a>
+                                        <a href="#skills" class="card-link link-colour-2">Find out more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- image card -->
+                            <div class="card-container col-lg-4 col-md-12 col-sm-12">
+                                <div class="card bg-dark">
+                                    <div class="card-body">
+                                        <img src="./assets/images/png/MJones_circle_Img.png" alt="selfie" id="photo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end about section -->
+                    </section>
+                    <div class="container-fluid">
+                        <div class="row apps">
+                            <div class="skills-box">
+                                <!-- logos row -->
+                                <div class="language-logos">
+                                    <!-- <img src="./assets/images/svg/logos/Coder-Logo.png" alt="code-squid-logo" id="squid"> -->
+                                    <img src="./assets/images/svg/logos/html5_lg.svg" alt="html5-logo" id="html5">
+                                    <img src="./assets/images/svg/logos/css3_lg.svg" alt="css-logo" id="css">
+                                    <img src="./assets/images/svg/logos/js_lg.svg" alt="js-logo" id="js">
+                                    <img src="./assets/images/svg/logos/github_purple_lg.svg" alt="github-icon" id="git">
+                                    <img src="./assets/images/svg/logos/python-logo.png" alt="python-logo" id="py">
+                                    <img src="./assets/images/svg/logos/flask-logo-png-transparent.png" alt="flask-logo" id="fl">
+                                    <img src="./assets/images/svg/logos/mongodb.png" alt="mongodb-logo" id="db">
+                                    <img src="./assets/images/svg/logos/vscode_logo.png" alt="vscode-logo" id="vs">
+                                    <img src="./assets/images/svg/logos/inkscape_logo.png" alt="inkscape-logo" id="ink">
+                                    <img src="./assets/images/svg/logos/aesprite_icon.png" alt="aesprite logo" id="ae">
+                                    <img src="./assets/images/svg/logos/ableton_live.png" alt="ableton-logo" id="live">
+                                    <img src="./assets/images/svg/logos/logic_pro_logo.png" alt="logic-pro-logo" id="log">
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <!-- end fluid container -->
                 </div>
-                <!-- end fluid container -->
+                <!-- end about cols -->
             </div>
-            <!-- end about cols -->
         </div>
+
         <!-- projects cols container -->
         <!-- py-5 px-3 mx-auto -->
         <!-- <div class="col-lg-12 col-md-10 py-5 px-3 mx-auto"> -->
@@ -530,17 +535,16 @@
                     <div class="skills-box">
                         <!-- logos row -->
                         <div class="language-logos">
-                            <img src="./assets/images/svg/logos/Coder-Logo.png" alt="code-squid-logo" id="squid">
                             <img src="./assets/images/svg/logos/html5_lg.svg" alt="html5-logo" id="html5">
                             <img src="./assets/images/svg/logos/css3_lg.svg" alt="css-logo" id="css">
                             <img src="./assets/images/svg/logos/js_lg.svg" alt="js-logo" id="js">
                             <img src="./assets/images/svg/logos/github_purple_lg.svg" alt="github-icon" id="git">
                             <img src="./assets/images/svg/logos/python-logo.png" alt="python-logo" id="py">
-                            <img src="./assets/images/svg/logos/flask-logo-png-transparent.png" alt="flask-logo"
-                                id="fl">
+                            <img src="./assets/images/svg/logos/flask-logo-png-transparent.png" alt="flask-logo" id="fl">
                             <img src="./assets/images/svg/logos/mongodb.png" alt="mongodb-logo" id="db">
                             <img src="./assets/images/svg/logos/vscode_logo.png" alt="vscode-logo" id="vs">
                             <img src="./assets/images/svg/logos/inkscape_logo.png" alt="inkscape-logo" id="ink">
+                            <img src="./assets/images/svg/logos/aesprite_icon.png" alt="aesprite logo" id="ae">
                             <img src="./assets/images/svg/logos/ableton_live.png" alt="ableton-logo" id="live">
                             <img src="./assets/images/svg/logos/logic_pro_logo.png" alt="logic-pro-logo" id="log">
                         </div>
@@ -548,7 +552,7 @@
                         <ul>
                             <li id="fe"><b>Front-end design & development</b></li>
                             <li id="be"><b>Back-end Python and databases</b></li>
-                            <li id="vi"><b>Vector graphics & illustrations</b></li>
+                            <li id="vi"><b>Vector graphics, assets, icons & illustrations</b></li>
                             <li id="an"><b>2D Animation and game design</b></li>
                             <li id="mp"><b>Music Production & Recording</b></li>
                         </ul>
@@ -557,21 +561,21 @@
             </section>
         </div>
         <!-- contact section -->
-        <!-- Card 3 -->
         <div class="container-fluid">
             <section class="page-section" id="contact" data-bs-spy="scroll" data-bs-target="#contact"
-            data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
-                <h2 class="heading">Contact Me</h2>
+                data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+                <h2 class="heading-contact">Contact Me</h2>
                 <div class="row contact-box">
+                    <!-- contact cards -->
                     <div class="col-lg-7 col-md-6 col-sm-12">
                         <div class="card bg-dark">
                             <div class="card-body custom-card-body">
-                                <h5 class="card-title">Please get in touch!</h5>
                                 <p>
                                     I am always looking for <em><b> exciting collaborative projects</b></em>,
                                     shared workload team builds and <em><b>awesome freelance opportunities</b></em>
-                                    So please feel free to get in touch via any of the following methods<br>
+                                <br>
                                 </p>
+                                <p>Please feel free to get in touch via any of the following methods</p>
                                 <!-- links list -->
                                 <ul>
                                     <li id="gh"><a href="https://github.com/Matt-Jones-Developer"><b>GitHub</b></a></li>
@@ -591,15 +595,15 @@
                                         alt="soundcloud-icon" id="scloud">
                                     <!-- album link -->
                                     <p><a href="https://soundcloud.com/sampledat/sets/glitchys-dancehall-in-the-fine?si=8724031080694302a5e1a7638b0b1dfd&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">
-                                        <span><b>Listen to my music here</b></span></a></p>
+                                        <span><b>Listen to my music</b></span></a></p>
                                     <img src="./assets/images/svg/logos/icon-soundcloud-1822927095.png"
                                         alt="soundcloud-icon" id="scloud1">
                                 </div>
                             </div>
                         </div>
-                        <!-- End card 3 -->
+                        <!-- End contact card -->
                     </div>
-                    <!-- Card 3 -->
+                    <!-- form card -->
                     <div class="col-lg-5 col-md-6 col-sm-12">
                         <div class="card bg-dark">
                             <div class="card-body custom-card-body">
@@ -608,17 +612,18 @@
                                         <label for="exampleInputEmail1" class="form-label">Email address</label>
                                         <input type="email" class="form-control" id="exampleInputEmail1"
                                             aria-describedby="emailHelp" placeholder="Enter your finest email">
-                                        <div id="emailHelp" class="form-text custom-text">I'll never share your email with
-                                            anyone else.
+                                        <div id="emailHelp" class="form-text custom-text">
+                                            I'll never share your email with anyone else.
                                         </div>
-                                        <label for="exampleInputText1" class="form-label custom-form-label">What can I help
-                                            you with?</label>
+                                        <label for="exampleInputText1" class="form-label custom-form-label"
+                                            placeholder="Add a short comment here">
+                                            What can I help you with?</label>
                                         <input type="text" class="form-control" id="exampleFormControlTextarea1">
                                     <button type="submit" class="btn btn-primary custom-btn-form">Submit</button>
                                 </form>
                             </div>
                         </div>
-                        <!-- End card 3 -->
+                        <!-- End form card -->
                     </div>
                 </div>
             </section>
