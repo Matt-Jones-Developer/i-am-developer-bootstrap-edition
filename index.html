@@ -28,43 +28,44 @@
 
     <title>i-am-developer Bootstrapped Portfolio</title>
 
-    <body>
-        <!-- overflow wrapper (ios fix) -->
-        <div class="wrapper">
-                <!-- Navbar with sticky top -->
-            <!-- <nav class="navbar bg-dark sticky-top navbar-expand-lg nav-anim"> -->
-            <nav class="navbar navbar-expand-lg bg-dark sticky-top nav-anim">
-                <div class="container-fluid">
-                    <a class="navbar-brand custom-navbar-brand" href="index.html">
-                        <!-- logo -->
-                        <img src="./assets/images/svg/icons/icn_code_blocks_wht.svg" alt="Logo" width="30" height="28"
-                            class="d-inline-block align-text-center" id="logo">
-                        i am developer
-                    </a>
-                    <!-- hamburger toggle -->
-                    <button class="navbar-toggler ms-2 bg-dark navbar-toggler-transition custom-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <!-- navbar links -->
-                    <div class="collapse navbar-collapse nav-right" id="navbarNav">
-                        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active-dark custom-nav-item" aria-current="page" href="index.html">home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link custom-nav-item" href="#about">about</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link custom-nav-item" href="#projects">projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link custom-nav-item" href="#contact">contact</a>
-                            </li>
-                        </ul>
-                    </div>
+    <body data-spy="scroll" id="home">
+
+        <!-- Navbar with sticky top -->
+        <nav class="navbar navbar-expand-lg bg-dark sticky-top custom-nav nav-anim">
+            <div class="container-fluid">
+                <a class="navbar-brand custom-navbar-brand" href="index.html">
+                    <!-- logo -->
+                    <img src="./assets/images/svg/icons/icn_code_blocks_wht.svg" alt="Logo" width="30" height="28"
+                        class="d-inline-block align-text-center" id="logo">
+                    i am developer
+                </a>
+                <!-- hamburger toggle -->
+                <button class="navbar-toggler ms-2 bg-dark navbar-toggler-transition custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- navbar links -->
+                <div class="collapse navbar-collapse nav-right" id="navbarNav">
+                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active-dark custom-nav-item" aria-current="page" href="#home">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-nav-item" href="#about">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-nav-item" href="#projects">projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-nav-item" href="#contact">contact</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
+            </div>
+        </nav>
+
+        <!-- overflow wrapper (ios fix) must be outside of the nav?-->
+        <div class="wrapper">
             <!-- header jumbotron -->
             <!-- research pd- and mb ! -->
             <header class="pb-3 mb-5 header-hero">
@@ -304,16 +305,16 @@
                     <!-- about container -->
                     <div class="py-5 px-3 mx-auto">
                         <div class="container-fluid">
-                            <!-- spyscroll settings -->
+                            <!-- spyscroll settings data-bs-root-margin="0px 0px -40% -->
                             <section class="pb-3 mb-5 page-section" id="about" data-bs-spy="scroll" data-bs-target="#about"
-                                data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+                                data-bs-root-margin="0px 50px -40%" data-bs-smooth-scroll="true" tabindex="0">
                                 <h1 class="heading">Web Developer | UX UI Designer</h1>
                                 <!-- cards -->
                                 <div class="row">
                                     <div class="card-container col-lg-8 col-md-12 col-sm-12">
                                         <div class="card bg-dark">
                                             <div class="card-body card-left">
-                                                <h2 class="card-title">Professional Journey</h2>
+                                                <h2 class="card-title h2-custom">Professional Journey</h2>
                                                 <h6 class="card-subtitle mb-2 text-muted">Why you should you hire me</h6>
                                                 <p class="card-text">
                                                     Hello World! My name is Matt Jones and I am a passionate web developer and
@@ -654,6 +655,7 @@
                     <br>
                 </div>
             </footer>
+            <!-- end wrapper -->
         </div>
     </body>
 </html>

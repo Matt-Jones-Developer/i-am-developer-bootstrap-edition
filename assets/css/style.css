@@ -30,7 +30,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
     /* border: 1px solid red; */
 }
 
@@ -52,6 +51,9 @@ body {
     line-height: 1.5;
     padding: 0;
     margin: 0;
+    /* improve spyscroll */
+    /* margin-top: 40px; */
+    overflow-y: scroll;
 }
 
 h1,
@@ -62,6 +64,8 @@ h5,
 h6 {
     margin: 0;
     font-weight: 300;
+    padding-top: 60px;
+    margin-top: -80px;
 }
 
 h1 {
@@ -112,11 +116,22 @@ hr {
     color: var(--highlight);
 }
 
+.h2-custom {
+    padding-top: 1rem;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 /* navbar */
 
 #logo {
     width: 50px;
     height: 50px;
+}
+
+.custom-nav {
+    z-index: 99;
 }
 
 .custom-navbar-brand {
@@ -205,7 +220,7 @@ hr {
 }
 
 .nav-right {
-    animation: fadeIn 2s normal backwards;
+    animation: fadeIn 3s normal backwards;
     animation-iteration-count: 1;
     /* cannot delay ue to hamburger!! */
     /* animation-delay: 2s; */
@@ -318,6 +333,12 @@ hr {
     margin: 2rem auto;
     /* border: 1px solid red; */
 }
+
+.page-section:focus, .page-section:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+ 
 
 /* about section */
 
@@ -451,10 +472,17 @@ hr {
 
 /* section - contact */
 
+/* adjust contact margin */
+
+#contact {
+    margin: 4rem 1rem;
+}
+
 
 .heading-contact {
     padding-left: 1rem;
     padding-top: 4rem;
+    padding-bottom: 2rem;
 }
 
 .contact-box ul {
@@ -483,6 +511,10 @@ hr {
     text-align: left;
     margin: 0 auto;
     padding: 0 1rem;
+}
+
+.signup label {
+    width: 500px;
 }
 
 .custom-form-label,
@@ -656,11 +688,16 @@ hr {
 
     .card {
         margin: 2rem 1rem;
+        padding-top: 2rem;
     }
 
     .language-logos img {
         width: 50px;
         padding: 0;
+    }
+
+    .signup label {
+        width: 600px;
     }
 
 }
