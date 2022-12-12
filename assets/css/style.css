@@ -4,6 +4,7 @@
 
 :root {
     --bs-dark: #353A3F;
+    --bs-black: #000000;
     --dark: #333333;
     --light: #fff;
     --highlight: #74FBB5;
@@ -29,11 +30,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* border: 1px solid red; */
 }
 
-html {
-    scroll-behavior: smooth;
-}
+.wrapper {
+    position: relative;
+    overflow-x: hidden;
+  }
 
 body {
     /* doc says no need to create new rules, just edit values? - but his doesn't work */
@@ -41,8 +45,6 @@ body {
     --bs-body-line-height: 1.4; */
     /* --bs-body-bg: var(--bs-gray-100); */
     /* these work fine */
-    position: relative;
-    overflow-x: hidden;
     background-image: var(--gradient);
     font-family: 'Raleway', sans-serif;
     font-size: 1.2rem;
@@ -252,7 +254,7 @@ hr {
 }
 
 .bg-grid-container>* {
-    border: 1px solid black;
+    border: 1px solid var(--bs-black);
 }
 
 .grid-item {
@@ -298,6 +300,7 @@ hr {
 .h1-custom {
     margin-bottom: 1rem;
     font-size: 80px;
+    font-weight: 700;
 }
 
 .custom-btn {
@@ -330,6 +333,9 @@ hr {
 .card {
     margin: 1rem;
     box-shadow: var(--shadow);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card-body {
@@ -343,10 +349,10 @@ hr {
     text-align: left;
 }
 
-.card-body img {
+/* .card-body img {
     justify-self: center;
     text-align: center;
-}
+} */
 
 /* .custom-card-body {
     background-color: rgba(66, 66, 66, 0.4);
@@ -416,6 +422,7 @@ hr {
 
 .language-logos img {
     width: 70px;
+    grid-area: item;
 }
 
 /*  skills s p r e a d  */
@@ -563,22 +570,317 @@ hr {
 
 /* responsive media queries */
 
+@media screen and (max-width: 1024px) {
+
+    /* jumbotron edits */
+
+    .bg-grid-container {
+        padding: 2rem 5px;
+        margin: 0 3px;
+        margin-right: 3px;
+        margin-bottom: 1rem;
+        gap: 4px;
+    }
+
+    /* about section cards */
+
+    /* headings */
+    .heading,
+    .heading-skills,
+    .heading-contact {
+        padding-bottom: 2rem;
+    }
+
+    /* skills */
+
+    .skills-box ul {
+        display: block;
+        padding-top: 2rem;
+        line-height: 4rem;
+        width: 100%;
+    }
+
+    .skills-box ul>li {
+        text-align: center;
+        letter-spacing: .7rem;
+        text-decoration: none;
+    }
+
+     /* project cards */
+
+     .card {
+        margin: .4rem;
+     }
+
+     .card-body {
+        padding: 1rem;
+     }
+
+     .card-text {
+        font-size: 16px;
+     }
+}
+
+@media screen and (max-width: 995px) {
+
+    /* navbar edits  */
+    .navbar-toggler-icon {
+        font-size: 30px;
+        padding-top: .5rem;
+    }
+
+    .header-hero {
+        margin: 0 auto;
+        margin-bottom: 5rem;
+        padding-top: 0;
+    }
+
+    .jumbo-bottom {
+        margin-top: 8rem;
+
+    }
+
+    .jumbo-bottom h1 {
+        font-size: 68px;
+    }
+
+    .heading {
+        margin-bottom: 0;
+    }
+
+    .heading-skills,
+    .heading-contact {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .card {
+        margin: 2rem 1rem;
+    }
+
+    .language-logos img {
+        width: 50px;
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width: 834px) {
+
+    /* navbar edits  */
+    .navbar-toggler-icon {
+        font-size: 30px;
+        padding-top: .5rem;
+    }
+
+    /* jumbrotron edits */
+
+    .bg-grid-container {
+        padding: 2rem 5px;
+        margin: 0 1rem;
+        margin-right: .8rem;
+        margin-bottom: 4rem;
+        gap: 5px;
+    }
+
+    .jumbo-bottom {
+        margin-top: 4rem;
+
+    }
+
+    .jumbo-bottom h1 {
+        font-size: 68px;
+    }
+
+    /* .skills-box {
+        margin-top: 1rem;
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: repeat(6 1fr);
+        grid-template-rows: 120px 120px;
+        grid-template-areas: 
+        "item item item item item item"
+        "item item item item item item";
+    } */
+
+    .apps {
+        height: 50px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    #projects {
+        margin-top: 0;
+    }
+
+    /* why are these not just heading? */
+    .heading-skills,
+    .heading-contact {
+        padding-bottom: 2rem;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    #skills {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .language-logos img {
+        width: 30px;
+
+    }
+
+    .skills-box ul {
+        display: block;
+        line-height: 4rem;
+    }
+
+    .skills-box ul>li {
+        text-align: center;
+        letter-spacing: .5rem;
+    }
+
+}
+
 @media screen and (max-width: 768px) {
 
     /* adjust header center */
 
+    h2 {
+        font-size: 44px;
+    }
+
     .bg-grid-container {
-        padding: 2rem 0;
-        margin-right: 5px;
-        gap: 2px;
+        padding: 2rem .5rem;
+        margin-right: 1.6rem;
+        margin-bottom: 4rem;
+        gap: 6px;
+    }
+
+
+    .jumbo-bottom {
+        margin-top: 8rem;
+
     }
 
     .h1-custom {
-        font-size: 48px;
+        font-size: 40px;
     }
 
     .header-hero {
-        margin: -2rem -2rem;
+        margin: 2rem auto;
+        margin-bottom: 2rem;
+    }
+
+    .jumbo-custom-bottom {
+        margin: 8rem auto;
+        scale: 1.0;
+    }
+
+    .heading-skills,
+    .heading-contact {
+        padding-bottom: 2rem;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .skills-box ul {
+        display: block;
+        text-align: center;
+        letter-spacing: 2rem;
+        line-height: 2rem;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    
+    h1 {
+        font-size: 32px;
+    }
+
+    /* this not working? */
+    .h1-custom {
+        font-size: 28px;
+    }
+
+    /* heading size */
+    .heading {
+        font-size: 55px;
+    }
+
+    /* nor is this!? */
+    .header-hero {
+        margin-top: 0;
+    }
+
+    /* row width? */
+
+    .jumbo-bottom {
+        margin: 1rem 5px;
+    }
+    
+    /* cards */
+
+    /* .card-container {
+        margin: 1rem;
+    } */
+
+    /* .row {
+        margin: 1rem 0px;
+    } */
+
+    .card {
+        margin: 1rem 0;
+        padding-top: 1rem;
+    }
+
+    /* skills section */
+    .skills-box ul {
+        margin: 2rem 0;
+        padding: 2rem 0;
+        margin-bottom: 0;
+    }
+
+    /* contact section */
+
+    #contact {
+        margin-top: 0px;
+    }
+
+}
+
+@media screen and (max-width: 414px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    /* .container-fluid {
+        margin: 0 auto;
+        padding: 0;
+    } */
+
+    .bg-grid-container {
+        padding: 4rem .5rem;
+        margin-left: 5px;
+        margin-right: 4rem;
+        margin-bottom: 4rem;
+        gap: 3px;
+    }
+
+    .h1-custom {
+        font-size: 30px;
+    }
+
+    .header-hero {
+        margin: 2rem auto;
+        margin-bottom: 6rem;
     }
 
     .jumbo-custom-bottom {
@@ -587,8 +889,5 @@ hr {
         margin-right: 2rem;
     }
 
-    .jumbo-custom-bottom {
-        margin: 0 auto;
-        scale: 1.0;
-    }
+
 }
