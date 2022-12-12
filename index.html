@@ -28,7 +28,7 @@
 
     <title>i-am-developer Bootstrapped Portfolio</title>
 
-    <body data-spy="scroll" id="home">
+    <body class="custom-body" data-spy="scroll" id="home">
 
         <!-- Navbar with sticky top -->
         <nav class="navbar navbar-expand-lg bg-dark sticky-top custom-nav nav-anim">
@@ -40,13 +40,13 @@
                     i am developer
                 </a>
                 <!-- hamburger toggle -->
-                <button class="navbar-toggler ms-2 bg-dark navbar-toggler-transition custom-toggler" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler ms-2 bg-dark custom-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon custom-toggler-icon"></span>
                 </button>
                 <!-- navbar links -->
-                <div class="collapse navbar-collapse nav-right" id="navbarNav">
-                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse custom-collapse nav-right" id="navbarNav">
+                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0 justify-content-end">
                         <li class="nav-item">
                             <a class="nav-link active-dark custom-nav-item" aria-current="page" href="#home">home</a>
                         </li>
@@ -64,10 +64,9 @@
             </div>
         </nav>
 
-        <!-- overflow wrapper (ios fix) must be outside of the nav?-->
+        <!-- overflow wrapper (ios/safari fix) -->
         <div class="wrapper">
             <!-- header jumbotron -->
-            <!-- research pd- and mb ! -->
             <header class="pb-3 mb-5 header-hero">
                 <!-- jumbotron top -->
                 <div class="jumbotron jumbo-custom-top">
@@ -270,7 +269,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- jumbrotron bottom -->
+                <!-- jumbotron bottom -->
                 <div class="container-fluid">
                     <!-- CTA -->
                     <div class="jumbotron jumbo-custom-bottom col-lg-12 col-md-12 col-sm-12">
@@ -294,22 +293,22 @@
                             <hr class="my-4 custom-hr">
                         </div>
                     </div>
+                    <!-- End jumbotron -->
                 </div>
-                <!-- End double jumbotron -->
             </header>
 
             <!-- main -->
             <main class="main">
                 <!-- about -jumbotron wrap - as per criteria? -->
-                <div class="jumbotron">
+                <div class="jumbotron about-jumbo">
                     <!-- about container -->
                     <div class="py-5 px-3 mx-auto">
                         <div class="container-fluid">
-                            <!-- spyscroll settings data-bs-root-margin="0px 0px -40% -->
+                            <!-- about section w spyscroll settings -->
                             <section class="pb-3 mb-5 page-section" id="about" data-bs-spy="scroll" data-bs-target="#about"
-                                data-bs-root-margin="0px 50px -40%" data-bs-smooth-scroll="true" tabindex="0">
+                                data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
                                 <h1 class="heading">Web Developer | UX UI Designer</h1>
-                                <!-- cards -->
+                                <!-- about cards -->
                                 <div class="row">
                                     <div class="card-container col-lg-8 col-md-12 col-sm-12">
                                         <div class="card bg-dark">
@@ -328,13 +327,12 @@
                                                     I have studied Python for a number of years which taught me how to
                                                     think like a programmer and gave me an excellent foundation
                                                     upon which to understand both <em><b>front and back-end
-                                                            development.</b></em><br>
+                                                    development.</b></em><br>
                                                     <br>
                                                     Prior to being a developer, I was the founder & CEO of a music technology
-                                                    company
-                                                    working with schools, youth centres and prisons in the UK for 10 years.
+                                                    company, working with schools, youth centres and prisons in the UK for 10 years.
                                                     I would say my background is fairly unique in that I have always had to
-                                                    break the mold to <em><b>carve my own path</b></em> to success.
+                                                    break the mold and <em><b>carve my own path</b></em> to success.
                                                 </p>
                                                 <a href="#contact" class="card-link link-colour"><b>Arrange Meeting</b></a>
                                                 <a href="#skills" class="card-link link-colour-2">Find out more</a>
@@ -344,19 +342,20 @@
                                     <!-- image card -->
                                     <div class="card-container col-lg-4 col-md-12 col-sm-12">
                                         <div class="card bg-dark">
-                                            <div class="card-body">
+                                            <div class="card-body img-card">
                                                 <img src="./assets/images/png/MJones_circle_Img.png" alt="selfie" id="photo">
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- end row -->
                                 </div>
                                 <!-- end about section -->
                             </section>
+                            <!-- languages and applications logos -->
                             <div class="container-fluid">
-                                <div class="row">
+                                <div class="row icon-row">
                                     <!-- logos row -->
                                     <div class="language-logos apps">
-                                        <!-- <img src="./assets/images/svg/logos/Coder-Logo.png" alt="code-squid-logo" id="squid"> -->
                                         <img src="./assets/images/svg/logos/html5_lg.svg" alt="html5-logo" id="html5">
                                         <img src="./assets/images/svg/logos/css3_lg.svg" alt="css-logo" id="css">
                                         <img src="./assets/images/svg/logos/js_lg.svg" alt="js-logo" id="js">
@@ -379,160 +378,150 @@
                 <!-- end about jumbotron -->
                 </div>
 
-                <!-- projects cols container -->
-                <!-- py-5 px-3 mx-auto -->
-                <!-- <div class="col-lg-12 col-md-10 py-5 px-3 mx-auto"> -->
-                <!-- should this be row or container? -->
+                <!-- projects container -->
                 <div class="container-fluid">
                     <!-- projects section -->
                     <section class="page-section p-3 rounded-2" id="projects" data-bs-spy="scroll" data-bs-target="#projects"
                         data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
-                        <!-- <h2 class="heading">Projects & Commissions</h2> -->
-                        <!-- project grid as cards -->
-                        <!-- <br> -->
-                        <!-- cards -->
-
-                        <!-- why another container?? -->
-                        <div class="container-fluid">
-                            <h2 class="heading">Projects & Commissions</h2>
-                            <!-- row 1 -->
-                            <div class="row">
-                                <!-- Card 1 -->
-                                <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <div class="card bg-dark">
-                                        <img src="./assets/images/png/screenshots/ultimate_study_guide_topgrid_screenshot.png"
-                                            class="card-img-top" alt="...">
-                                        <div class="card-body custom-card-body">
-                                            <h5 class="card-title">Ultimate Study Guide</h5>
-                                            <p class="card-text">A revamped study guide that was created before I started the
-                                                course.
-                                                <br>
-                                                Check out the JS searchbar and add your own username feature!
-                                            </p>
-                                            <a href="#" class="btn btn-primary">Check it out</a>
-                                        </div>
+                        <h2 class="heading">Projects & Commissions</h2>
+                        <!-- row 1 -->
+                        <div class="row">
+                            <!-- Card 1 -->
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="card bg-dark">
+                                    <img src="./assets/images/png/screenshots/ultimate_study_guide_topgrid_screenshot.png"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body custom-card-body">
+                                        <h5 class="card-title">Ultimate Study Guide</h5>
+                                        <p class="card-text">A revamped study guide that was created before I started the
+                                            course.
+                                            <br>
+                                            Check out the JS searchbar and add your own username feature!
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Check it out</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End card 1 -->
+                            <!-- end top row-->
+                        </div>
+                        <!-- row 2 -->
+                        <div class="row row-cards">
+                            <!-- Card 1 -->
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="card bg-dark">
+                                    <img src="./assets/images/png/screenshots/rock_paper_knife_loader.png"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body custom-card-body">
+                                        <h5 class="card-title">Rock, Paper... KNIFE!</h5>
+                                        <p class="card-text">
+                                            A remixed action-packed battle game, runs in command-line, written in Python. Install and enjoy!
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Check it out</a>
                                     </div>
                                 </div>
                                 <!-- End card 1 -->
-                                <!-- end top row-->
                             </div>
-                            <!-- row 2 -->
-                            <div class="row row-cards">
-                                <!-- Card 1 -->
-                                <div class="col-lg-4 col-md-12 col-sm-12">
-                                    <div class="card bg-dark">
-                                        <img src="./assets/images/png/screenshots/rock_paper_knife_loader.png"
-                                            class="card-img-top" alt="...">
-                                        <div class="card-body custom-card-body">
-                                            <h5 class="card-title">Rock, Paper... KNIFE!</h5>
-                                            <p class="card-text">
-                                                A remixed action-packed battle game, runs in command-line, written in Python. Install and enjoy!
-                                            </p>
-                                            <a href="#" class="btn btn-primary">Check it out</a>
-                                        </div>
+                            <!-- Card 2 -->
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="card bg-dark">
+                                    <img src="./assets/images/png/screenshots/gameboy_assets_site.png" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body custom-card-body">
+                                        <h5 class="card-title">1989 Gameboy Game Assets</h5>
+                                        <p class="card-text">
+                                            A commission of original gameboy art assets, created for an upcoming game cartridge release.
+                                            Limited run!
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Check it out</a>
                                     </div>
-                                    <!-- End card 1 -->
                                 </div>
-                                <!-- Card 2 -->
-                                <div class="col-lg-4 col-md-12 col-sm-12">
-                                    <div class="card bg-dark">
-                                        <img src="./assets/images/png/screenshots/gameboy_assets_site.png" class="card-img-top"
-                                            alt="...">
-                                        <div class="card-body custom-card-body">
-                                            <h5 class="card-title">1989 Gameboy Game Assets</h5>
-                                            <p class="card-text">
-                                                A commission of original gameboy art assets, created for an upcoming game cartridge release.
-                                            </p>
-                                            <a href="#" class="btn btn-primary">Check it out</a>
-                                        </div>
-                                    </div>
-                                    <!-- End card 2 -->
-                                </div>
-                                <!-- Card 3 -->
-                                <div class="col-lg-4 col-md-12 col-sm-12">
-                                    <div class="card bg-dark">
-                                        <img src="./assets/images/png/screenshots/cristalvision_site.png" class="card-img-top"
-                                            alt="...">
-                                        <div class="card-body custom-card-body">
-                                            <h5 class="card-title">Cristal Vision Website</h5>
-                                            <p class="card-text">
-                                                A website build for my first client - it's still under development but it's due for deployment next month.
-                                            </p>
-                                            <a href="#" class="btn btn-primary">Check it out</a>
-                                        </div>
-                                    </div>
-                                    <!-- End card 3 -->
-                                </div>
-                                <!-- end row of cards -->
+                                <!-- End card 2 -->
                             </div>
-                            <!-- row 3 -->
-                            <div class="row row-cards">
-                                <!-- Card 1 -->
-                                <div class="col-lg-4 col-md-12 col-sm-12">
-                                    <div class="card bg-dark">
-                                        <img src="./assets/images/png/screenshots/bio-metal.png" class="card-img-top" alt="...">
-                                        <div class="card-body custom-card-body">
-                                            <h5 class="card-title">BIO-METAL!</h5>
-                                            <p class="card-text">
-                                                An alternative, bolder version of my bio-page - you've been warned!
-                                            </p>
-                                            <a href="#" class="btn btn-primary">Check it out</a>
-                                        </div>
+                            <!-- Card 3 -->
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="card bg-dark">
+                                    <img src="./assets/images/png/screenshots/cristalvision_site.png" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body custom-card-body">
+                                        <h5 class="card-title">Cristal Vision Website</h5>
+                                        <p class="card-text">
+                                            A website build for my first client - it's still under development but it's due for deployment next month.
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Check it out</a>
                                     </div>
-                                    <!-- End card 1 -->
                                 </div>
-                                <!-- Card 2 -->
-                                <div class="col-lg-4 col-md-12 col-sm-12">
-                                    <div class="card bg-dark">
-                                        <img src="./assets/images/png/screenshots//horiseon_screenshot.png" class="card-img-top"
-                                            alt="...">
-                                        <div class="card-body custom-card-body">
-                                            <h5 class="card-title">Code refactoring commission</h5>
-                                            <p class="card-text">
-                                                I was hired to refactor and clean up some code for a business.
-                                            </p>
-                                            <a href="#" class="btn btn-primary">Check it out</a>
-                                        </div>
-                                    </div>
-                                    <!-- End card 2 -->
-                                </div>
-                                <!-- Card 3 -->
-                                <div class="col-lg-4 col-md-12 col-sm-12">
-                                    <div class="card bg-dark">
-                                        <img src="./assets/images/png/screenshots/survey_shot.png" class="card-img-top"
-                                            alt="...">
-                                        <div class="card-body custom-card-body">
-                                            <h5 class="card-title">Take my survey!</h5>
-                                            <p class="card-text">
-                                                Please take a minute to leave some feedback on my
-                                                coding
-                                                skills.
-                                            </p>
-                                            <a href="#" class="btn btn-primary">Check it out</a>
-                                        </div>
-                                    </div>
-                                    <!-- End card 3 -->
-                                </div>
-                                <!-- end row of cards -->
+                                <!-- End card 3 -->
                             </div>
-                            <!-- end container-fluid -->
+                            <!-- end row 2 -->
+                        </div>
+                        <!-- row 3 -->
+                        <div class="row row-cards">
+                            <!-- Card 1 -->
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="card bg-dark">
+                                    <img src="./assets/images/png/screenshots/bio-metal.png" class="card-img-top" alt="...">
+                                    <div class="card-body custom-card-body">
+                                        <h5 class="card-title">BIO-METAL!</h5>
+                                        <p class="card-text">
+                                            An alternative, bolder version of my bio-page - you've been warned!
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Check it out</a>
+                                    </div>
+                                </div>
+                                <!-- End card 1 -->
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="card bg-dark">
+                                    <img src="./assets/images/png/screenshots//horiseon_screenshot.png" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body custom-card-body">
+                                        <h5 class="card-title">Code refactoring commission</h5>
+                                        <p class="card-text">
+                                            I was hired to refactor and clean up some code for a business.
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Check it out</a>
+                                    </div>
+                                </div>
+                                <!-- End card 2 -->
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="card bg-dark">
+                                    <img src="./assets/images/png/screenshots/survey_shot.png" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body custom-card-body">
+                                        <h5 class="card-title">Take my survey!</h5>
+                                        <p class="card-text">
+                                            Please take a minute to leave some feedback on my
+                                            coding
+                                            skills.
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Check it out</a>
+                                    </div>
+                                </div>
+                                <!-- End card 3 -->
+                            </div>
+                            <!-- end row of cards -->
                         </div>
                         <!-- end projects section -->
                     </section>
                     <!-- end container -->
                 </div>
-                <!-- new container -->
-                <!-- make the section container-fluid - no need for a separate DIV!! -->
+                <!-- skills container -->
                 <div class="container-fluid">
                     <!-- skills section -->
-                    <section class="page-section" id="skills">
+                    <section class="page-section" id="skills" data-bs-spy="scroll" data-bs-target="#skills"
+                        data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
                         <div class="heading-skills">
                             <h2>Languages, Skills & Applications</h2>
                             <br>
                         </div>
+                        <!-- logos row -->
                         <div class="row">
                             <div class="skills-box">
-                                <!-- logos row -->
+                                <!-- logos - need to be nested divs for responsive grid-->
                                 <div class="language-logos">
                                     <img src="./assets/images/svg/logos/html5_lg.svg" alt="html5-logo" id="html5">
                                     <img src="./assets/images/svg/logos/css3_lg.svg" alt="css-logo" id="css">
@@ -555,12 +544,16 @@
                                     <li id="an"><b>2D Animation and game design</b></li>
                                     <li id="mp"><b>Music Production & Recording</b></li>
                                 </ul>
+                                <!-- end skills-box -->
                             </div>
+                            <!-- end row -->
                         </div>
                     </section>
+                    <!-- end skills container -->
                 </div>
-                <!-- contact section -->
+                <!-- contact container -->
                 <div class="container-fluid">
+                    <!-- contact section -->
                     <section class="page-section" id="contact" data-bs-spy="scroll" data-bs-target="#contact"
                         data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
                         <h2 class="heading-contact">Contact Me</h2>
@@ -568,6 +561,7 @@
                             <!-- contact cards -->
                             <div class="col-lg-7 col-md-12 col-sm-12">
                                 <div class="card bg-dark">
+                                    <!-- card body -->
                                     <div class="card-body custom-card-body">
                                         <p>
                                             I am always looking for <em><b> exciting collaborative projects</b></em>,
@@ -579,22 +573,21 @@
                                         <ul>
                                             <li id="gh"><a href="https://github.com/Matt-Jones-Developer"><b>GitHub</b></a></li>
                                             <li id="lk"><a href="www.linkedin.com/in/matt-jones-zx81"><b>LinkedIn</b></a></li>
-                                            <li id="sk"><a
-                                                    href="https://ukvirtfept112-wi02517.slack.com/archives/C04DMB7BK0B"><b>Slack
-                                                        Channel</b></a></li>
+                                            <li id="sk"><a href="https://ukvirtfept112-wi02517.slack.com/archives/C04DMB7BK0B"><b>Slack Channel</b></a></li>
                                             <li id="tw"><a href="https://twitter.com/glitchy81_dev"><b>Twitter</b></a></li>
                                             <li id="el"><a href="mailto:glitchyghost81@protonmail.com"><b>Email</b></a></li>
-                                            <li id="cv"><a
-                                                    href="./assets/images/png/MattJones_WebDeveloper_CV_2022.pdf"><b>CV</b></a>
-                                            </li>
+                                            <li id="cv"><a href="./assets/images/png/MattJones_WebDeveloper_CV_2022.pdf"><b>CV</b></a></li>
                                         </ul>
+                                        <br>
                                         <!-- follow on soundcloud -->
                                         <div class="music-link">
                                             <img src="./assets/images/svg/logos/icon-soundcloud-1822927095.png"
                                                 alt="soundcloud-icon" id="scloud">
                                             <!-- album link -->
+                                            <br>
                                             <p><a href="https://soundcloud.com/sampledat/sets/glitchys-dancehall-in-the-fine?si=8724031080694302a5e1a7638b0b1dfd&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">
-                                                <span><b>Listen to my music</b></span></a></p>
+                                                <span><b>Listen to my music</b></span></a>
+                                            </p>
                                             <img src="./assets/images/svg/logos/icon-soundcloud-1822927095.png"
                                                 alt="soundcloud-icon" id="scloud1">
                                         </div>
@@ -618,33 +611,42 @@
                                                     placeholder="Add a short comment here">
                                                     What can I help you with?</label>
                                                 <input type="text" class="form-control" id="exampleFormControlTextarea1">
-                                            <button type="submit" class="btn btn-primary custom-btn-form">Submit</button>
+                                            <button type="submit" class="btn btn-primary custom-btn custom-btn-form">Submit</button>
                                         </form>
                                     </div>
                                 </div>
                                 <!-- End form card -->
                             </div>
+                            <!-- end contact row -->
                         </div>
                     </section>
+                    <!-- end contact container -->
                 </div>
             </main>
 
             <!-- footer -->
             <footer class="footer">
-                <!-- footer social icons -->
+                <!-- footer icons -->
                 <div class="footer-icons">
                     <ul class="ul-icons">
-                        <li><a href="#"><img src="./assets/images/svg/icons/icn_mail_wht.svg" width="24px" height="24px"
-                                    alt="mail-icn"></a></li>
-                        <li><a href="https://github.com/Matt-Jones-Developer" class="git-icn"><img
-                                    src="./assets/images/svg/icons/github_icn_wht.svg" width="24px" height="24px"
-                                    alt="github-icn"></a></li>
-                        <li><a href="https://glitchygames.slack.com"><img src="./assets/images/svg/icons/slack_color.svg"
-                                    width="24px" height="24px" alt="slack-icn"></a></li>
-                        <li><a href="https://twitter.com/glitchy81_dev"><img src="./assets/images/svg/icons/icn_twitter_wht.svg"
-                                    width="24px" height="24px" alt="twitter-icn"></a></li>
-                        <li><a href="#"><img src="./assets/images/svg/icons/icn_linkedin.svg" width="24px" height="24px"
-                                    alt="linkedin-icn"></a></li>
+                        <li>
+                            <a href="#"><img src="./assets/images/svg/icons/icn_mail_wht.svg" alt="mail-icn"></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Matt-Jones-Developer" class="git-icn">
+                                <img src="./assets/images/svg/icons/github_icn_wht.svg" alt="github-icn"></a>
+                        </li>
+                        <li>
+                            <a href="https://glitchygames.slack.com">
+                                <img src="./assets/images/svg/icons/slack_color.svg" alt="slack-icn"></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/glitchy81_dev">
+                                <img src="./assets/images/svg/icons/icn_twitter_wht.svg" alt="twitter-icn"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./assets/images/svg/icons/icn_linkedin.svg" alt="linkedin-icn"></a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-text">
@@ -654,8 +656,9 @@
                     </p>
                     <br>
                 </div>
+                <!-- end footer -->
             </footer>
-            <!-- end wrapper -->
+            <!-- end site wrapper -->
         </div>
     </body>
 </html>

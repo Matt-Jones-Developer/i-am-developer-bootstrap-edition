@@ -26,6 +26,8 @@
     --shadow: 10px 10px rgba(66, 66, 66, 0.5);
 }
 
+/* browser reset */
+
 * {
     padding: 0;
     margin: 0;
@@ -33,23 +35,24 @@
     /* border: 1px solid red; */
 }
 
+/* needs fixing - wrapper causing sluggish scrolling */
 html {
     scroll-behavior: smooth;
 }
 
+/* ios/safari overflowX bug fix */
 .wrapper {
+    /* allow for sticky nav space when link scrolling */
+    margin-top: 4rem;
     position: relative;
     overflow-x: hidden;
-    /* allow smooth scroll */
-    z-index: -1;
+    /* allow smooth scroll 
+    -1 works but disables all <a> tags? */
+    z-index: 1;
   }
 
-body {
-    /* doc says no need to create new rules, just edit values? - but his doesn't work */
-    /* --bs-body-font-family: var(--bs-font-monospace);
-    --bs-body-line-height: 1.4; */
-    /* --bs-body-bg: var(--bs-gray-100); */
-    /* these work fine */
+  /* does this need to be custom? */
+.custom-body {
     background-image: var(--gradient);
     font-family: 'Raleway', sans-serif;
     font-size: 1.2rem;
@@ -57,9 +60,8 @@ body {
     line-height: 1.5;
     padding: 0;
     margin: 0;
-    /* improve spyscroll */
-    /* margin-top: 40px; */
-    overflow-y: scroll;
+    /* improve spyscroll ? */
+    /* overflow-y: scroll; */
 }
 
 h1,
@@ -70,6 +72,7 @@ h5,
 h6 {
     margin: 0;
     font-weight: 300;
+    /* adjusted to assist spyscroll */
     padding-top: 60px;
     margin-top: -80px;
 }
@@ -112,8 +115,6 @@ hr {
 .custom-hr {
     background-color: var(--dark);
     margin: 1rem 0;
-    /* color: var(--light);
-    border: 0; */
     opacity: 1;
 
 }
@@ -140,57 +141,87 @@ hr {
     z-index: 99;
 }
 
+/* brand text and logo*/
+
 .custom-navbar-brand {
     color: var(--light);
     align-items: center;
     animation: easeInOutLeft 2s;
-    /* margin-left: 1rem; */
-    /* border: 1px solid red; */
 }
 
 .custom-navbar-brand:hover {
     color: var(--highlight);
 }
 
-/* brand text */
-
 .custom-navbar-brand img {
     width: 40px;
     height: 40px;
 }
 
-/* custom hamburger */
+/* custom hamburger - 3 main issues */
+
+/* 1. I want the hamburger nav items to be inline (not vertical) */
+/* 2. I want the items to not fade in during toggle  */
+/* 3. I want the original toggle completely hidden */
+/* 4. the toggle menu should reset on refresh ~(it stays open) */
+
+
+/* issue hiding the bs toggle? 
+- It always shows above the awesome font icon */
+
 .custom-toggler {
     color: var(--bs-dark);
     margin: 1rem;
     margin-top: .5rem;
 }
 
-/* hamburger toggle */
+/* this hides them both! */
 
-.navbar-toggler-icon {
+/* .navbar-toggler {
+    display: none;
+} */
+
+/* custom toggle */
+
+/* .navbar-toggler-icon { */
+
+    .custom-toggler-icon {
+
+    /* removes lines OK */
     background-image: none;
+
     /* removes bg only - not border? */
     background-color: var(--bs-dark);
-    /* border-radius: 0;
+
+    /* do nothing */
+    /* border-radius: 0px;
     border: none; */
 }
 
-.navbar-toggler-icon::before {
+.custom-toggler-icon::before {
+    /* add the custom toggle */
     font-family: Font Awesome\ 6 Free;
     content: "\f0c9";
+    /* set colour and size */
     color: var(--light);
     font-size: 44px;
 }
 
-.navbar-toggler-icon:hover {
+.custom-toggler-icon:hover {
+    /* hide again on hover? Nope */
+    /* background-image: none; */
+
     color: transparent;
-    background-color: var(--bs-dark);
+    /* background-color: var(--bs-dark); */
 }
 
-/* .navbar-toggler-transition {
-    box-shadow: .15s ease-in-out;
-} */
+/* make toggled items flex inline (horizontally) */
+.custom-collapse {
+    /* display:flex;
+    justify-content: space-between;
+    align-items: center; */
+    margin-left: .5rem;
+}
 
 .custom-nav-item {
     color: var(--light);
@@ -228,7 +259,7 @@ hr {
 .nav-right {
     animation: fadeIn 3s normal backwards;
     animation-iteration-count: 1;
-    /* cannot delay ue to hamburger!! */
+    /* cannot delay due to hamburger!! */
     /* animation-delay: 2s; */
 }
 
@@ -236,11 +267,15 @@ hr {
     margin-right: 1rem;
 }
 
+/* end navbar */
+
 /* header / hero */
 
 .container {
     margin: 0 auto;
 }
+
+/* double jumbo */
 
 .jumbo-custom-top,
 .jumbo-custom-bottom {
@@ -251,14 +286,15 @@ hr {
     /* border: 1px solid red; */
 }
 
+.header-hero {
+    margin-top: -4rem;
+}
 
 .header-hero .container {
     display: flex;
     justify-content: center;
-    margin-top: -1rem;
 }
 
-/* jumbotron custom top */
 /* hero-anim squares */
 
 .bg-grid-container {
@@ -305,18 +341,22 @@ hr {
 
 /* jumbotron custom bottom */
 
-
 .jumbo-custom-bottom {
     padding-top: 4rem;
     margin: 2rem auto;
     /* scale: 1.1; */
+    /* border: 1px solid red; */
 }
 
-/* why do we need 2 here? custom too? */
+/* why do we need 2 here? may be removed */
 .jumbo-bottom {
-    margin: 2rem;
+    margin: 2rem auto;
+    /* margin: 0 auto; */
+    /* border: 1px solid red; */
 }
 
+
+/* ready to build CTA heading*/
 
 .h1-custom {
     margin-bottom: 1rem;
@@ -348,10 +388,10 @@ hr {
 
 /* about section */
 
-/* .row-cards {
-    justify-content: center;
-    align-items: center;
-} */
+.about-jumbo {
+    /* adjust gap to match nav */
+    margin-top: -4rem;
+}
 
 .heading {
     margin: 1rem;
@@ -376,15 +416,6 @@ hr {
     text-align: left;
 }
 
-/* .card-body img {
-    justify-self: center;
-    text-align: center;
-} */
-
-/* .custom-card-body {
-    background-color: rgba(66, 66, 66, 0.4);
-} */
-
 .card-subtitle {
     margin-bottom: 1rem;
 }
@@ -405,34 +436,59 @@ hr {
     color: var(--peachy);
 }
 
-/* section - skills */
+/* early icon row */
+
+.icon-row {
+    padding: 2rem;
+    /* padding-top: 1rem; */
+}
 
 .apps {
     padding-top: 5rem;
 }
 
-/* .page-section {
-    border: 1px solid red;
-} */
+
+/* projects section  */
+
+
+.custom-card-body {
+    padding-top: 3rem;
+}
+
+#projects {
+    margin-bottom: 4rem;
+}
+
+
+/* section - skills */
+
 
 .heading-skills {
     padding-left: 2rem;
     padding-top: 4rem;
+    padding-bottom: 2rem;
 }
 
 .skills-box ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     letter-spacing: .5rem;
     line-height: 2rem;
     margin-top: 2rem;
+    margin-bottom: 4rem;
+    /* forced center ? */
+    margin-left: -1.5rem;
+    /* padding-left: -2rem; */
+    /* border: 1px solid red; */
 }
 
 .skills-box ul>li {
-    margin: 0 2rem;
-    /* list-style-type: none; */
-    text-align: left;
+    /* margin: 0 2rem; */
+    list-style-type: none;
+    /* text-align: left; */
+    text-align: center;
+    /* border: 1px solid red; */
 }
 
 /* languages and apps logos */
@@ -449,7 +505,8 @@ hr {
 
 .language-logos img {
     width: 70px;
-    grid-area: item;
+    /* todo */
+    /* grid-area: item; */
 }
 
 /*  skills s p r e a d  */
@@ -475,7 +532,6 @@ hr {
 }
 
 
-
 /* section - contact */
 
 /* adjust contact margin */
@@ -486,9 +542,7 @@ hr {
 
 
 .heading-contact {
-    padding-left: 1rem;
-    padding-top: 4rem;
-    padding-bottom: 2rem;
+    padding: 4rem 1rem;
 }
 
 .contact-box ul {
@@ -497,15 +551,13 @@ hr {
     text-align: center;
     text-decoration: none;
     list-style-type: none;
+    margin: 0 auto;
 }
 
+/* todo - make these links text-anim (colour) */
 .contact-box li {
     padding-right: 1rem;
 }
-
-/* .contact-box li:last-child {
-    padding-right: 0;
-} */
 
 
 .custom-text {
@@ -573,6 +625,7 @@ hr {
 .footer {
     position: relative;
     top: 4rem;
+    height: 10rem;
     background-color: var(--bs-dark);
     display: block;
     text-align: center;
@@ -599,6 +652,16 @@ hr {
     font-size: 18px;
 }
 
+.ul-icons {
+    margin: 0 auto;
+    /* why no centering? */
+    margin-left: -2rem;
+}
+
+.ul-icons img {
+    width: 24px;
+}
+
 .ul-icons>li {
     display: inline-block;
     padding: 1rem 1rem;
@@ -616,6 +679,11 @@ hr {
 }
 
 @media screen and (max-width: 1450px) {
+
+    .jumbo-bottom {
+        margin-top: 6rem;
+    }
+
     .signup label {
         width: 300px;
     }
@@ -633,7 +701,19 @@ hr {
         gap: 4px;
     }
 
+    .h1-custom {
+        font-size: 85px;
+    }
+
     /* about section cards */
+
+    .card{
+        padding-bottom: 2rem;
+    }
+
+    .card-body img {
+        width: 250px;
+    }
 
     /* headings */
     .heading,
@@ -661,10 +741,12 @@ hr {
 
      .card {
         margin: .4rem;
+        margin-bottom: 2rem;
      }
 
      .card-body {
         padding: 1rem;
+        padding-top: 2rem;
      }
 
      .card-text {
@@ -763,6 +845,18 @@ hr {
         "item item item item item item";
     } */
 
+    .h2-custom {
+        margin-top: -3rem;
+    }
+
+    .card-left {
+        padding-bottom: 2rem;
+    }
+
+    .img-card {
+        padding-bottom: 4rem;
+    }
+
     .apps {
         height: 50px;
         margin: 0 auto;
@@ -820,7 +914,7 @@ hr {
 
 
     .jumbo-bottom {
-        margin-top: 8rem;
+        margin-top: 2rem;
 
     }
 
@@ -829,20 +923,38 @@ hr {
     }
 
     .header-hero {
-        margin: 2rem auto;
-        margin-bottom: 2rem;
+        margin: 1rem auto;
+        margin-bottom: 1rem;
     }
 
     .jumbo-custom-bottom {
-        margin: 8rem auto;
+        margin: 5rem auto;
+        margin-bottom: 0;
         scale: 1.0;
+    }
+
+    .main {
+        margin-top: -3rem;
     }
 
     .heading-skills,
     .heading-contact {
         padding-bottom: 2rem;
-        padding-left: 0;
+        padding-left: 0px;
         text-align: center;
+    }
+
+    .h2-custom {
+        padding-top: 4rem;
+    }
+
+    .card {
+        margin: 2rem 0;
+        padding-top: 0;
+    }
+
+    .card-title {
+        margin-top: -4rem;
     }
 
     .skills-box ul {
@@ -854,16 +966,16 @@ hr {
     }
 
     .signup label {
-        width: 400px;
+        width: 500px;
+    }
+
+    .footer p {
+        font-size: 16px;
     }
 }
 
 @media screen and (max-width: 575px) {
     
-    h1 {
-        font-size: 32px;
-    }
-
     /* this not working? */
     .h1-custom {
         font-size: 28px;
@@ -915,43 +1027,113 @@ hr {
 
 }
 
+@media screen and (max-width: 500px) {
+
+    .signup label {
+        width: 300px;
+    }
+
+    .footer {
+        height: 10rem;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
+}
+
 @media screen and (max-width: 414px) {
 
-    h1 {
-        font-size: 30px;
-    }
-
     h2 {
-        font-size: 24px;
+        font-size: 42px;
     }
 
-    /* .container-fluid {
-        margin: 0 auto;
-        padding: 0;
-    } */
+    .h2-custom {
+        margin-top: -5rem;
+        margin-bottom: -1rem;
+        font-size: 28px;
+    }
+
+    .heading {
+        margin: 2rem 0;
+        margin-bottom: 0;
+    }
+
+    .heading-skills,
+    .heading-contact {
+        font-size: 48px;
+    }
 
     .bg-grid-container {
         padding: 4rem .5rem;
+        margin-top: .7rem;
         margin-left: 5px;
         margin-right: 4rem;
         margin-bottom: 4rem;
         gap: 3px;
     }
 
-    .h1-custom {
-        font-size: 30px;
-    }
-
     .header-hero {
-        margin: 2rem auto;
+        margin: 2rem 0;
         margin-bottom: 6rem;
     }
 
     .jumbo-custom-bottom {
-        margin-top: 6rem;
-        margin-left: 2rem;
-        margin-right: 2rem;
+        margin: 0 auto;
+        margin-top: 18rem;
     }
 
+    .jumbo-bottom {
+        /* force width */
+        margin: 0 -1rem;
+    }
+
+    #about {
+        /* force cards wide */
+        margin: 0 -2rem;
+        margin-top: 12rem;
+    }
+
+    #projects {
+        margin: 0 -2rem;
+        margin-top: -6rem;
+    }
+
+    .card {
+        margin: 1rem auto;
+        padding-top: 0;
+    }
+
+    .card-link {
+        font-size: 16px;
+    }
+
+    .img-card img {
+        margin-top: 1rem;
+        margin-bottom: -1rem;
+        width: 330px;
+    }
+
+    .card-title {
+        margin-top: -5rem;
+    }
+
+    .skills-box {
+        margin-top: -4rem;
+    }
+
+    #contact {
+        margin: 0 -1rem;
+        margin-top: 4rem;
+    }
+
+    .custom-card-body {
+        width: 100%;
+    }
+
+    .card-body ul {
+        display: block;
+
+    }
 
 }
