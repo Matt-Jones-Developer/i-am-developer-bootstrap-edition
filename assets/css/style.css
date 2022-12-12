@@ -33,9 +33,15 @@
     /* border: 1px solid red; */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .wrapper {
     position: relative;
     overflow-x: hidden;
+    /* allow smooth scroll */
+    z-index: -1;
   }
 
 body {
@@ -599,8 +605,21 @@ hr {
 }
 
 
-
 /* responsive media queries */
+
+/* adjust form label sizes */
+
+@media screen and (max-width: 1550px) {
+    .signup label {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .signup label {
+        width: 300px;
+    }
+}
 
 @media screen and (max-width: 1024px) {
 
@@ -650,6 +669,10 @@ hr {
 
      .card-text {
         font-size: 16px;
+     }
+
+     .contact-form {
+        padding-bottom: 2rem;
      }
 }
 
@@ -828,6 +851,10 @@ hr {
         letter-spacing: 2rem;
         line-height: 2rem;
         margin-bottom: 0;
+    }
+
+    .signup label {
+        width: 400px;
     }
 }
 
