@@ -138,11 +138,6 @@ hr {
     color: var(--highlight);
 }
 
-.custom-navbar-brand img {
-    width: 40px;
-    height: 40px;
-}
-
 /* custom hamburger - 3 main issues */
 
 /* 1. I want the hamburger nav items to be inline (not vertical) */
@@ -170,7 +165,7 @@ hr {
 
 /* .navbar-toggler-icon { */
 
-    .custom-toggler-icon {
+.custom-toggler-icon {
 
     /* removes lines OK */
     background-image: none;
@@ -189,7 +184,7 @@ hr {
     content: "\f0c9";
     /* set colour and size */
     color: var(--light);
-    font-size: 44px;
+    font-size: 40px;
 }
 
 .custom-toggler-icon:hover {
@@ -341,10 +336,13 @@ hr {
 
 .jumbo-custom-bottom {
     padding-top: 4rem;
-    margin: 2rem auto;
+    margin: 2rem;
     margin-bottom: 3rem;
     /* scale: 1.1; */
-    /* border: 1px solid red; */
+}
+
+.lead-custom {
+    font-size: 24px;
 }
 
 /* ready to build CTA heading */
@@ -399,6 +397,7 @@ hr {
 
 .heading {
     margin: 1rem;
+    padding-bottom: 2rem;
 }
 
 .card {
@@ -468,9 +467,8 @@ hr {
 
 
 .heading-skills {
-    padding-left: 2rem;
-    padding-top: 4rem;
-    padding-bottom: 2rem;
+    padding-top: 6rem;
+    padding-bottom: 0;
 }
 
 .skills-box ul {
@@ -730,11 +728,14 @@ hr {
 
     #projects {
         margin-top: -1rem;
+        margin-bottom: -2rem;
+        /* border: 1px solid red; */
     }
 
     /* headings */
-    .heading {
-        text-align: center;
+    .heading,
+    .heading-contact {
+        text-align: left;
         padding-bottom: 2rem;
     }
 
@@ -742,8 +743,13 @@ hr {
 
     #skills {
         margin-top: 6rem;
-        margin-bottom: -1rem;
+        margin-bottom: 2rem;
     }
+
+
+    .heading-skills {
+        text-align: center;
+     }
 
     .icon-row {
         margin-top: -1rem;
@@ -868,6 +874,7 @@ hr {
 
     .h1-custom {
         font-size: 68px;
+        padding-top: 0;
     }
 
     .custom-heading {
@@ -902,6 +909,7 @@ hr {
 
     #projects {
         margin-top: -2rem;
+        margin-bottom: 2rem;
     }
 
     .card {
@@ -955,7 +963,6 @@ hr {
     }
 
     .h1-custom {
-        margin-top: -3rem;
         font-size: 40px;
     }
 
@@ -988,6 +995,12 @@ hr {
         letter-spacing: 2rem;
         line-height: 2rem;
         margin-bottom: 0;
+    }
+
+    /* contact */
+
+    #contact {
+        margin-top: 4rem;
     }
 
     .signup label {
@@ -1096,13 +1109,13 @@ hr {
 
     .header-hero {
         margin: 2rem 0;
-        margin-bottom: 6rem;
+        margin-bottom: 8rem;
     }
 
     .jumbo-custom-bottom {
-        margin: 2rem -2rem;
-        margin-top: 14rem;
-        margin-bottom: 6rem;
+        margin: 2rem auto;
+        margin-top: 18rem;
+        margin-bottom: 8rem;
     }
 
     .lead-custom {
@@ -1118,8 +1131,8 @@ hr {
     }
 
     .custom-heading {
-        padding: 1rem 1rem;
-        padding-top: 4rem;
+        padding: 1rem 0;
+        padding-top: 6rem;
         font-size: 44px;
     }
 
@@ -1139,7 +1152,7 @@ hr {
     #projects {
         margin: 0 -1rem;
         margin-top: -6rem;
-        margin-bottom: 6rem;
+        margin-bottom: 1rem;
     }
 
     .card {
@@ -1159,8 +1172,24 @@ hr {
         margin-top: -5rem;
     }
 
+    /* skills section */
+
+    #skills {
+        margin-top: -2rem;
+    }
+
     .skills-box {
         margin-top: -4rem;
+        text-align: center;
+    }
+
+    .skills-box ul > li {
+        padding: 1rem;
+    }
+
+    .heading-skills h2 {
+        padding-bottom: 4rem;
+        font-size: 40px;
     }
 
     #contact {
@@ -1168,21 +1197,30 @@ hr {
         margin-top: -2rem;
     }
 
-    .custom-card-body {
-        width: 100%;
+    .heading-contact {
+        font-size: 40px;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+    }
+
+    .contact-box {
+        text-align: center;
     }
 
     .card-body ul {
         display: block;
+        text-align: center;
 
     }
 
     .footer {
         height: 12rem;
+        margin-top: 4rem;
     }
 
     .footer p {
         font-size: 18px;
+        padding: 1rem;
     }
 
 }
@@ -1209,9 +1247,9 @@ hr {
     }
 
     .jumbo-custom-bottom {
-        margin: 2rem -3rem;
-        margin-top: 10rem;
-        margin-bottom: 6rem;
+        margin: 2rem auto;
+        margin-top: 14rem;
+        margin-bottom: 8rem;
     }
 
     .h1-custom {
@@ -1247,6 +1285,17 @@ hr {
         font-size: 40px;
     }
 
+    /* skills section */
+
+    #skills {
+        margin-top: -8rem;
+    }
+
+    .heading-skills h2 {
+        font-size: 40px;
+        margin: 1rem -1rem;
+    }
+
     .skills-box {
         text-align: center;
     }
@@ -1254,8 +1303,26 @@ hr {
         padding: 1rem;
     }
 
+    .icon-row {
+        padding: 1rem;
+    }
+
+    /* contact section */
+
     #contact {
-        margin-top: -4rem;
+        margin-top: 1rem;
+        border: 1px solid red;
+    }
+
+    .heading-contact {
+        padding-left: 1rem;
+    }
+
+    .contact-box {
+        text-align: center;
+    }
+
+    .custom-card-body ul {
         text-align: center;
     }
 
@@ -1264,4 +1331,151 @@ hr {
         font-size: 14px;
     }
 
+}
+
+@media screen and (max-width: 320px) {
+
+    #logo {
+        width: 33px;
+        height: 33px;
+    }
+
+    .custom-toggler {
+        margin: 0;
+    }
+
+    .custom-toggler-icon::before {
+        font-size: 30px;
+        margin-top: 2rem;
+    }
+
+    .wrapper {
+        margin-top: -1rem;
+    }
+
+    .bg-grid-container {
+        padding: 4rem .5rem;
+        margin-top: 2rem;
+        margin-left: -1rem;
+        margin-right: .8rem;
+        margin-bottom: 9rem;
+        gap: 2px;
+    }
+
+    .header-hero {
+        margin: 4rem 0;
+        margin-bottom: 6rem;
+    }
+
+    .jumbo-custom-bottom {
+        margin: 2rem 0;
+        margin-top: 16rem;
+        margin-bottom: 12rem;
+        border: 1px solid red;
+    }
+
+    .h1-custom {
+        font-size: 44px;
+    }
+
+
+    .h2-custom {
+        margin-top: -5rem;
+        margin-bottom: -1rem;
+        font-size: 28px;
+    }
+
+    .card-link {
+        font-size: 14px;
+    }
+
+    .card-left {
+        padding-bottom: 1rem;
+    }
+
+    .img-card {
+        padding-bottom: 1rem;
+    }
+
+    .img-card img {
+        width: 250px;
+    }
+
+    .icon-row {
+        padding: 1rem;
+    }
+
+    .apps {
+        width: 20px;
+        height: 20px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .heading {
+        font-size: 40px;
+    }
+
+    /* skills section */
+
+    #skills {
+        margin-top: -8rem;
+    }
+
+    .heading-skills h2 {
+        font-size: 33px;
+        margin: 1rem -1rem;
+    }
+
+    .skills-box {
+        text-align: center;
+    }
+    .skills-box ul > li {
+        padding: 1rem;
+    }
+
+    .icon-row {
+        padding: 1rem;
+    }
+
+    /* contact section */
+
+    #contact {
+        margin-top: 1rem;
+        margin: 0 -.8rem;
+        border: 1px solid red;
+    }
+
+    .heading-contact {
+        padding-left: 1rem;
+    }
+
+    .contact-box {
+        text-align: center;
+    }
+
+    .custom-card-body {
+        margin: 0 auto;
+    }
+
+    .custom-card-body ul {
+        text-align: center;
+    }
+
+    .contact-form {
+        width: 280px;
+    }
+
+    .signup {
+        width: 280px;
+    }
+
+    /* .signup label {
+        width: 280px;
+    } */
+
+    .footer p {
+        padding: 1rem;
+        font-size: 14px;
+    }
 }
