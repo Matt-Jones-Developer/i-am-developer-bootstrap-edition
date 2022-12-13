@@ -24,6 +24,8 @@
             rgba(158, 158, 158, 0.8) 0%,
             rgba(255, 255, 255, 0.7) 100%);
     --shadow: 10px 10px rgba(66, 66, 66, 0.5);
+    --btn-shadow: 0 5px 10px 0 rgba(0,0,0,0.2),
+                 0 7px 10px 0 rgba(0,0,0,0.1);
 }
 
 /* browser reset */
@@ -115,6 +117,12 @@ hr {
     margin-bottom: 0;
 }
 
+/* btn classes */
+
+custom-btn:hover {
+    box-shadow: var(--box-shadow);
+}
+
 /* navbar */
 
 #logo {
@@ -138,63 +146,19 @@ hr {
     color: var(--highlight);
 }
 
-/* custom hamburger - 3 main issues */
-
-/* 1. I want the hamburger nav items to be inline (not vertical) */
-/* 2. I want the items to not fade in during toggle  */
-/* 3. I want the original toggle completely hidden */
-/* 4. the toggle menu should reset on refresh ~(it stays open) */
-
-
-/* issue hiding the bs toggle? 
-- It always shows above the awesome font icon */
-
 .custom-toggler {
-    /* color: var(--bs-dark); */
     position: absolute;
     top: 0;
     right: -.7rem;
     margin: 1rem;
     margin-top: .5rem;
     border: none;
-    /* background-color: transparent; */
-    background-color: #353A3F;
+    background-color: var(--bs-dark);
 }
 
 custom-toggler:hover {
     background-image: none;
-    background-color: #353A3F;
-}
-
-/* this hides them both! */
-
-/* .navbar-toggler {
-    display: none;
-} */
-
-/* custom toggle */
-
-/* .navbar-toggler-icon { */
-
-.custom-toggler-icon {
-
-    /* removes lines OK */
-    /* background-image: none; */
-    height: 67px;
-    background-color: #353A3F;
-
-    /* removes bg only - not border? */
-    /* background-color: var(--bs-dark); */
-
-    /* do nothing */
-    /* border-radius: 0px;
-    border: none; */
-}
-
-.custom-toggler span {
-    width: 67px;
-    height: 67px;
-    background-color: #353A3F;
+    background-color: var(--bs-dark);
 }
 
 .custom-toggler-icon::before {
@@ -204,24 +168,6 @@ custom-toggler:hover {
     /* set colour and size */
     color: var(--light);
     font-size: 40px;
-    background-color: #353A3F;
-}
-
-.custom-toggler-icon:hover {
-    /* hide again on hover? Nope */
-    /* background-image: none; */
-    background-color: #353A3F;
-    /* color: transparent; */
-    /* background-color: var(--bs-dark); */
-}
-
-/* make toggled items flex inline (horizontally) */
-.custom-collapse {
-    /* display:flex;
-    justify-content: space-between;
-    align-items: center; */
-    margin-left: .5rem;
-    background-color: #353A3F;
 }
 
 .custom-nav-item {
@@ -359,7 +305,6 @@ custom-toggler:hover {
     padding-top: 4rem;
     margin: 2rem;
     margin-bottom: 3rem;
-    /* scale: 1.1; */
 }
 
 .lead-custom {
@@ -370,17 +315,18 @@ custom-toggler:hover {
 
 .h1-custom {
     margin: 1rem 0;
-    /* margin-bottom: 1rem; */
     font-size: 80px;
     font-weight: 700;
 }
 
 .custom-btn {
+    transition-duration: 0.2s;
     background-color: var(--lumi);
 }
 
 .custom-btn:hover {
     background-color: var(--purps);
+    box-shadow: var(--btn-shadow);
 }
 
 /* main */
@@ -388,7 +334,6 @@ custom-toggler:hover {
 .page-section {
     padding: 0 1rem;
     margin: 2rem auto;
-    /* border: 1px solid red; */
 }
 
 .page-section:focus, 
@@ -483,13 +428,14 @@ custom-toggler:hover {
     margin-bottom: 4rem;
 }
 
-
 /* section - skills */
 
 
 .heading-skills {
     padding-top: 6rem;
     padding-bottom: 0;
+    /* why is this off? */
+    padding-left: 1rem;
 }
 
 .skills-box ul {
@@ -528,8 +474,6 @@ custom-toggler:hover {
 
 .language-logos img {
     width: 70px;
-    /* todo */
-    /* grid-area: item; */
 }
 
 /*  skills s p r e a d  */
@@ -554,6 +498,53 @@ custom-toggler:hover {
     color: var(--purps);
 }
 
+/* future skills */
+
+.custom-row {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.custom-card {
+    padding: 2rem;
+}
+
+.card-title-large-left {
+    font-size: 30px;
+    text-align: left;
+}
+
+.card-title-large {
+    font-size: 30px;
+}
+
+.custom-card-body-left {
+    text-align: left;
+}
+
+.future-skills-ul,
+.social-ul {
+    list-style-type: none;
+    line-height: 2.0;
+}
+
+.future-skills-ul {
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.icon-ul ul li:before {    
+    font-family: Font Awesome\ 6 Free;
+    content: '\f121';
+    margin:0 5px 0 -15px;
+    color: var(--aqua);
+}
+
+.social-ul {
+    /* cannot find bug */
+    margin-left: -2rem;
+}
 
 /* section - contact */
 
@@ -588,6 +579,8 @@ custom-toggler:hover {
     opacity: .4;
 }
 
+/* form bottom */
+
 .signup {
     text-align: left;
     margin: 0 auto;
@@ -595,7 +588,7 @@ custom-toggler:hover {
 }
 
 .signup label {
-    width: 500px;
+    width: 1000px;
 }
 
 .custom-form-label,
@@ -674,6 +667,8 @@ custom-toggler:hover {
     font-family: monospace;
     font-size: 18px;
 }
+
+/* footer icons */
 
 .ul-icons {
     margin: 0 auto;
