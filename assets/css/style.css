@@ -35,7 +35,6 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    /* border: 1px solid red; */
 }
 
 /* does this need to be custom? */
@@ -47,8 +46,6 @@
     line-height: 1.5;
     padding: 0;
     margin: 0;
-    /* improve spyscroll ? */
-    /* overflow-y: scroll; */
 }
 
 h1,
@@ -148,8 +145,8 @@ custom-btn:hover {
 
 .custom-toggler {
     position: absolute;
-    top: 0;
-    right: -.7rem;
+    top: .4rem;
+    right: -1.2rem;
     margin: 1rem;
     margin-top: .5rem;
     border: none;
@@ -162,10 +159,9 @@ custom-toggler:hover {
 }
 
 .custom-toggler-icon::before {
-    /* add the custom toggle */
+
     font-family: Font Awesome\ 6 Free;
     content: "\f0c9";
-    /* set colour and size */
     color: var(--light);
     font-size: 40px;
 }
@@ -176,7 +172,6 @@ custom-toggler:hover {
     font-size: 1rem;
 }
 
-/* set color on items focus */
 .custom-nav-item:focus {
     color: var(--purps);
 }
@@ -206,8 +201,6 @@ custom-toggler:hover {
 .nav-right {
     animation: fadeIn 3s normal backwards;
     animation-iteration-count: 1;
-    /* cannot delay due to hamburger!! */
-    /* animation-delay: 2s; */
 }
 
 #links {
@@ -219,16 +212,13 @@ custom-toggler:hover {
 /* header / hero */
 
 /* ios/safari overflowX bug fix */
+
 .wrapper {
-    /* allow for sticky nav space when link scrolling */
     margin-top: 4rem;
     position: relative;
     overflow-x: hidden;
+    overflow-y: hidden;
     margin-bottom: -2rem;
-    /* border: 1px solid red; */
-    /* allow smooth scroll 
-    -1 works but disables all <a> tags? */
-    /* z-index: 1; */
   }
 
 .container-grid {
@@ -243,7 +233,6 @@ custom-toggler:hover {
     align-items: center;
     justify-content: center;
     height: calc(40vh - 1rem);
-    /* border: 1px solid red; */
 }
 
 .header-hero {
@@ -358,7 +347,6 @@ custom-toggler:hover {
 .about-jumbo {
     /* adjust gap to match nav */
     margin-top: 2rem;
-    /* border: 1px solid red; */
 }
 
 .heading {
@@ -377,7 +365,6 @@ custom-toggler:hover {
 .card-body {
     padding: 2rem;
     text-align: center;
-    /* background-color: transparent; */
 }
 
 .card-left {
@@ -409,7 +396,6 @@ custom-toggler:hover {
 
 .icon-row {
     padding: 2rem;
-    /* padding-top: 1rem; */
 }
 
 .apps {
@@ -434,7 +420,6 @@ custom-toggler:hover {
 .heading-skills {
     padding-top: 6rem;
     padding-bottom: 0;
-    /* why is this off? */
     padding-left: 1rem;
 }
 
@@ -446,18 +431,12 @@ custom-toggler:hover {
     line-height: 2rem;
     margin-top: 2rem;
     margin-bottom: 4rem;
-    /* forced center ? */
     margin-left: -1.5rem;
-    /* padding-left: -2rem; */
-    /* border: 1px solid red; */
 }
 
 .skills-box ul>li {
-    /* margin: 0 2rem; */
     list-style-type: none;
-    /* text-align: left; */
     text-align: center;
-    /* border: 1px solid red; */
 }
 
 /* languages and apps logos */
@@ -542,61 +521,10 @@ custom-toggler:hover {
 }
 
 .social-ul {
-    /* cannot find bug */
     margin-left: -2rem;
 }
 
-/* section - contact */
-
-/* adjust contact margin */
-
-#contact {
-    margin: 4rem 1rem;
-}
-
-
-.heading-contact {
-    padding: 4rem 1rem;
-}
-
-.contact-box ul {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    text-decoration: none;
-    list-style-type: none;
-    margin: 0 auto;
-}
-
-/* todo - make these links text-anim (colour) */
-.contact-box li {
-    padding-right: 1rem;
-}
-
-
-.custom-text {
-    color: var(--light);
-    opacity: .4;
-}
-
-/* form bottom */
-
-.signup {
-    text-align: left;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-.signup label {
-    width: 1000px;
-}
-
-.custom-form-label,
-.custom-btn-form {
-    margin-top: 1rem;
-}
-
-/* contact links */
+/* social links */
 
 #gh a:hover {
     color: var(--aqua);
@@ -636,6 +564,50 @@ custom-toggler:hover {
 
 }
 
+/* section - contact */
+
+#contact {
+    margin: 4rem 1rem;
+}
+
+.mod {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.heading-contact {
+    padding: 4rem 1rem;
+}
+
+.custom-text {
+    color: var(--light);
+    opacity: .4;
+}
+
+/* form bottom */
+
+.signup {
+    text-align: left;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.signup label {
+    width: 900px;
+}
+
+.custom-form-label,
+.custom-btn-form {
+    margin-top: 2rem;
+}
+
+/* custom linkedIn banner */
+
+#banner {
+    height: 330px;
+}
+
 /* footer */
 
 .footer {
@@ -649,10 +621,6 @@ custom-toggler:hover {
     margin: 0 auto;
 
 }
-
-/* .footer p {
-    padding-bottom: 2rem;
-} */
 
 .footer-text {
     padding: 0px 0px;
@@ -692,7 +660,7 @@ custom-toggler:hover {
 
 @media screen and (max-width: 1550px) {
     .signup label {
-        width: 400px;
+        width: 700px;
     }
 }
 
@@ -703,7 +671,7 @@ custom-toggler:hover {
     }
 
     .signup label {
-        width: 300px;
+        width: 600px;
     }
 }
 
@@ -745,7 +713,6 @@ custom-toggler:hover {
     #projects {
         margin-top: -1rem;
         margin-bottom: -2rem;
-        /* border: 1px solid red; */
     }
 
     /* headings */
@@ -808,6 +775,10 @@ custom-toggler:hover {
      .contact-form {
         padding-bottom: 2rem;
      }
+
+     .signup label {
+        width: 500px;
+    }
 }
 
 @media screen and (max-width: 995px) {
@@ -854,7 +825,7 @@ custom-toggler:hover {
     }
 
     .signup label {
-        width: 600px;
+        width: 450px;
     }
 
 }
@@ -957,6 +928,16 @@ custom-toggler:hover {
         letter-spacing: .5rem;
     }
 
+    /* comtact */
+
+    #contact {
+        margin-top: 4rem;
+    }
+
+    .signup label {
+        width: 280px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -979,7 +960,7 @@ custom-toggler:hover {
     }
 
     .h1-custom {
-        font-size: 40px;
+        font-size: 44px;
     }
 
     .jumbo-custom-bottom {
@@ -1013,14 +994,20 @@ custom-toggler:hover {
         margin-bottom: 0;
     }
 
+    /* future skills & social */
+
+    .heading-future h2 {
+        font-size: 44px;
+        margin-top: 2rem;
+    }
     /* contact */
 
-    #contact {
-        margin-top: 4rem;
+    .heading-contact {
+        margin-top: 2rem;
     }
 
     .signup label {
-        width: 500px;
+        width: 400px;
     }
 
     .footer p {
@@ -1030,7 +1017,6 @@ custom-toggler:hover {
 
 @media screen and (max-width: 575px) {
     
-    /* this not working? */
     .h1-custom {
         font-size: 28px;
     }
@@ -1040,26 +1026,14 @@ custom-toggler:hover {
         font-size: 55px;
     }
 
-    /* nor is this!? */
     .header-hero {
         margin-top: 0;
     }
-
-    /* row width? */
 
     .jumbo-bottom {
         margin: 1rem 5px;
     }
     
-    /* cards */
-
-    /* .card-container {
-        margin: 1rem;
-    } */
-
-    /* .row {
-        margin: 1rem 0px;
-    } */
 
     .card {
         margin: 1rem 0;
@@ -1077,6 +1051,10 @@ custom-toggler:hover {
 
     #contact {
         margin-top: 0px;
+    }
+
+    .signup label {
+        width: 400px;
     }
 
 }
@@ -1159,7 +1137,6 @@ custom-toggler:hover {
     }
 
     #about {
-        /* force cards wide */
         margin: 0 -1rem;
         margin-top: 12rem;
         margin-bottom: 6rem;
@@ -1208,6 +1185,10 @@ custom-toggler:hover {
         font-size: 40px;
     }
 
+    .heading-future {
+        margin-top: -4rem;
+    }
+
     #contact {
         margin: 0 -1rem;
         margin-top: -2rem;
@@ -1227,6 +1208,11 @@ custom-toggler:hover {
         display: block;
         text-align: center;
 
+    }
+
+    .mod {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .footer {
@@ -1261,6 +1247,7 @@ custom-toggler:hover {
         margin: 2rem 0;
         margin-bottom: 6rem;
     }
+    
 
     .jumbo-custom-bottom {
         margin: 2rem auto;
@@ -1323,11 +1310,20 @@ custom-toggler:hover {
         padding: 1rem;
     }
 
+    .heading-future h2 {
+        font-size: 40px;
+    }
+
+    .card-mob {
+        padding-top: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     /* contact section */
 
     #contact {
         margin-top: 1rem;
-        border: 1px solid red;
     }
 
     .heading-contact {
@@ -1358,11 +1354,18 @@ custom-toggler:hover {
 
     .custom-toggler {
         margin: 0;
+        top: 10px;
+        right: -8px;
     }
 
     .custom-toggler-icon::before {
         font-size: 30px;
         margin-top: 2rem;
+    }
+
+    .custom-nav-item {
+        font-size: 14px;
+        padding-left: .5rem;
     }
 
     .wrapper {
@@ -1387,7 +1390,6 @@ custom-toggler:hover {
         margin: 2rem 0;
         margin-top: 16rem;
         margin-bottom: 12rem;
-        border: 1px solid red;
     }
 
     .h1-custom {
@@ -1417,17 +1419,6 @@ custom-toggler:hover {
         width: 250px;
     }
 
-    .icon-row {
-        padding: 1rem;
-    }
-
-    .apps {
-        width: 20px;
-        height: 20px;
-        margin: 0 auto;
-        align-items: center;
-    }
-
     .heading {
         font-size: 40px;
     }
@@ -1450,8 +1441,12 @@ custom-toggler:hover {
         padding: 1rem;
     }
 
-    .icon-row {
-        padding: 1rem;
+    .future-skills-ul {
+        font-size: 16px;
+    }
+
+    .future-skills-ul li {
+        text-align: left;
     }
 
     /* contact section */
@@ -1459,7 +1454,6 @@ custom-toggler:hover {
     #contact {
         margin-top: 1rem;
         margin: 0 -.8rem;
-        border: 1px solid red;
     }
 
     .heading-contact {
@@ -1478,17 +1472,25 @@ custom-toggler:hover {
         text-align: center;
     }
 
+
+    .card-mob {
+        padding-top: 2rem;
+        padding-left: .3rem;
+        padding-right: .3rem;
+    }
+
     .contact-form {
         width: 280px;
     }
 
     .signup {
-        width: 280px;
+        width: 250px;
     }
 
-    /* .signup label {
-        width: 280px;
-    } */
+    .mod {
+        padding-left: .7rem;
+        padding-right: .7rem;
+    }
 
     .footer p {
         padding: 1rem;
