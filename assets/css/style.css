@@ -36,23 +36,7 @@
     /* border: 1px solid red; */
 }
 
-/* needs fixing - wrapper causing sluggish scrolling */
-/* html {
-    scroll-behavior: smooth;
-} */
-
-/* ios/safari overflowX bug fix */
-.wrapper {
-    /* allow for sticky nav space when link scrolling */
-    margin-top: 4rem;
-    position: relative;
-    overflow-x: hidden;
-    /* allow smooth scroll 
-    -1 works but disables all <a> tags? */
-    /* z-index: 1; */
-  }
-
-  /* does this need to be custom? */
+/* does this need to be custom? */
 .custom-body {
     background-image: var(--gradient);
     font-family: 'Raleway', sans-serif;
@@ -272,6 +256,19 @@ hr {
 
 /* header / hero */
 
+/* ios/safari overflowX bug fix */
+.wrapper {
+    /* allow for sticky nav space when link scrolling */
+    margin-top: 4rem;
+    position: relative;
+    overflow-x: hidden;
+    margin-bottom: -2rem;
+    /* border: 1px solid red; */
+    /* allow smooth scroll 
+    -1 works but disables all <a> tags? */
+    /* z-index: 1; */
+  }
+
 .container-grid {
     margin: 0 auto;
 }
@@ -283,7 +280,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(40vh - .5rem);
+    height: calc(40vh - 1rem);
     /* border: 1px solid red; */
 }
 
@@ -305,9 +302,9 @@ hr {
     grid-template-rows: repeat(16, 1fr);
     gap: 3px;
     width: 100vw;
-    height: 250px;
+    height: 230px;
     padding: 2rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
     z-index: -1;
 }
 
@@ -345,6 +342,7 @@ hr {
 .jumbo-custom-bottom {
     padding-top: 4rem;
     margin: 2rem auto;
+    margin-bottom: 3rem;
     /* scale: 1.1; */
     /* border: 1px solid red; */
 }
@@ -352,7 +350,8 @@ hr {
 /* ready to build CTA heading */
 
 .h1-custom {
-    margin-bottom: 1rem;
+    margin: 1rem 0;
+    /* margin-bottom: 1rem; */
     font-size: 80px;
     font-weight: 700;
 }
@@ -373,7 +372,8 @@ hr {
     /* border: 1px solid red; */
 }
 
-.page-section:focus, .page-section:active {
+.page-section:focus, 
+.page-section:active {
     outline: none !important;
     box-shadow: none;
  }
@@ -381,9 +381,20 @@ hr {
 
 /* about section */
 
+#about {
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+}
+
+#photo {
+    border-radius: 20rem;
+    border: 3px solid var(--highlight);
+}
+
 .about-jumbo {
     /* adjust gap to match nav */
-    margin-top: -4rem;
+    margin-top: 2rem;
+    /* border: 1px solid red; */
 }
 
 .heading {
@@ -698,30 +709,50 @@ hr {
         font-size: 85px;
     }
 
+    .h2-custom {
+        padding-bottom: 0;
+    }
+
     /* about section cards */
 
-    .card{
+    .custom-card-about {
+        padding-top: -1rem;
         padding-bottom: 2rem;
+    }
+
+    .custom-card-img {
+        padding-bottom: 1rem;
     }
 
     .card-body img {
         width: 250px;
     }
 
+    #projects {
+        margin-top: -1rem;
+    }
+
     /* headings */
-    .heading,
-    .heading-skills,
-    .heading-contact {
+    .heading {
+        text-align: center;
         padding-bottom: 2rem;
     }
 
     /* skills */
 
+    #skills {
+        margin-top: 6rem;
+        margin-bottom: -1rem;
+    }
+
+    .icon-row {
+        margin-top: -1rem;
+    }
+
     .skills-box ul {
         display: block;
         padding-top: 2rem;
         line-height: 4rem;
-        width: 100%;
     }
 
     .skills-box ul>li {
@@ -744,6 +775,12 @@ hr {
 
      .card-text {
         font-size: 16px;
+     }
+
+     /* contact section */
+
+     #contact {
+        margin-top: -3rem;
      }
 
      .contact-form {
@@ -808,38 +845,41 @@ hr {
         padding-top: .5rem;
     }
 
-    /* jumbrotron edits */
+    /* wrapper fix */
+
+    .wrapper {
+        margin-top: 1rem;
+    }
+
+    /* jumbotron edits */
 
     .bg-grid-container {
         padding: 2rem 5px;
-        margin: 0 1rem;
+        margin: -4rem 1rem;
         margin-right: .8rem;
         margin-bottom: 4rem;
         gap: 5px;
     }
 
-    .jumbo-bottom {
-        margin-top: 4rem;
+    .jumbo-custom-bottom {
+        margin-top: -2rem;
 
     }
 
-    .jumbo-bottom h1 {
+    .h1-custom {
         font-size: 68px;
     }
 
-    /* .skills-box {
-        margin-top: 1rem;
-        border: 1px solid red;
-        display: grid;
-        grid-template-columns: repeat(6 1fr);
-        grid-template-rows: 120px 120px;
-        grid-template-areas: 
-        "item item item item item item"
-        "item item item item item item";
-    } */
+    .custom-heading {
+        font-size: 60px;
+    }
+
+    .custom-card-about {
+        padding-bottom: 1rem;
+    }
 
     .h2-custom {
-        margin-top: -3rem;
+        margin-top: -1rem;
     }
 
     .card-left {
@@ -847,7 +887,11 @@ hr {
     }
 
     .img-card {
-        padding-bottom: 4rem;
+        padding-bottom: 1rem;
+    }
+
+    .img-card img {
+        width: 400px;
     }
 
     .apps {
@@ -857,14 +901,15 @@ hr {
     }
 
     #projects {
-        margin-top: 0;
+        margin-top: -2rem;
     }
 
-    /* why are these not just heading? */
-    .heading-skills,
-    .heading-contact {
+    .card {
+        padding-top: 0;
+    }
+
+    .heading {
         padding-bottom: 2rem;
-        padding-left: 0;
         text-align: center;
     }
 
@@ -892,27 +937,9 @@ hr {
 
 @media screen and (max-width: 768px) {
 
-    /* adjust header center */
 
-    h2 {
-        font-size: 44px;
-    }
-
-    .bg-grid-container {
-        padding: 2rem .5rem;
-        margin-right: 1.6rem;
-        margin-bottom: 4rem;
-        gap: 6px;
-    }
-
-
-    .jumbo-bottom {
-        margin-top: 2rem;
-
-    }
-
-    .h1-custom {
-        font-size: 40px;
+    .wrapper {
+        margin-bottom: -4rem;
     }
 
     .header-hero {
@@ -920,21 +947,26 @@ hr {
         margin-bottom: 1rem;
     }
 
+    .bg-grid-container {
+        padding: 2rem .5rem;
+        margin-right: 1.6rem;
+        margin-bottom: 2rem;
+        gap: 6px;
+    }
+
+    .h1-custom {
+        margin-top: -3rem;
+        font-size: 40px;
+    }
+
     .jumbo-custom-bottom {
-        margin: 5rem auto;
+        margin: 2rem auto;
         margin-bottom: 0;
         scale: 1.0;
     }
 
     .main {
         margin-top: -3rem;
-    }
-
-    .heading-skills,
-    .heading-contact {
-        padding-bottom: 2rem;
-        padding-left: 0px;
-        text-align: center;
     }
 
     .h2-custom {
@@ -1037,24 +1069,20 @@ hr {
 
 @media screen and (max-width: 414px) {
 
-    h2 {
-        font-size: 42px;
+    .wrapper {
+        margin-top: -3rem;
+        margin-bottom: -8rem;
     }
+
+    .h1-custom {
+        font-size: 48px;
+    }
+
 
     .h2-custom {
         margin-top: -5rem;
         margin-bottom: -1rem;
         font-size: 28px;
-    }
-
-    .heading {
-        margin: 2rem 0;
-        margin-bottom: 0;
-    }
-
-    .heading-skills,
-    .heading-contact {
-        font-size: 48px;
     }
 
     .bg-grid-container {
@@ -1072,24 +1100,46 @@ hr {
     }
 
     .jumbo-custom-bottom {
-        margin: 0 auto;
-        margin-top: 18rem;
+        margin: 2rem -2rem;
+        margin-top: 14rem;
+        margin-bottom: 6rem;
     }
 
-    .jumbo-bottom {
-        /* force width */
-        margin: 0 -1rem;
+    .lead-custom {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .custom-btn {
+        font-size: 16px;
+    }
+
+    .custom-heading {
+        padding: 1rem 1rem;
+        padding-top: 4rem;
+        font-size: 44px;
+    }
+
+    .heading {
+        margin: 2rem 0;
+        margin-bottom: 0;
+        font-size: 40px;
     }
 
     #about {
         /* force cards wide */
-        margin: 0 -2rem;
+        margin: 0 -1rem;
         margin-top: 12rem;
+        margin-bottom: 6rem;
     }
 
     #projects {
-        margin: 0 -2rem;
+        margin: 0 -1rem;
         margin-top: -6rem;
+        margin-bottom: 6rem;
     }
 
     .card {
@@ -1102,8 +1152,6 @@ hr {
     }
 
     .img-card img {
-        margin-top: 1rem;
-        margin-bottom: -1rem;
         width: 330px;
     }
 
@@ -1117,7 +1165,7 @@ hr {
 
     #contact {
         margin: 0 -1rem;
-        margin-top: 4rem;
+        margin-top: -2rem;
     }
 
     .custom-card-body {
@@ -1127,6 +1175,93 @@ hr {
     .card-body ul {
         display: block;
 
+    }
+
+    .footer {
+        height: 12rem;
+    }
+
+    .footer p {
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+
+    .wrapper {
+        margin-top: -3rem;
+        margin-bottom: -4rem;
+    }
+
+    .bg-grid-container {
+        padding: 4rem .5rem;
+        margin-top: 2rem;
+        margin-left: -1rem;
+        margin-right: 1rem;
+        margin-bottom: 7rem;
+        gap: 2px;
+    }
+
+    .header-hero {
+        margin: 2rem 0;
+        margin-bottom: 6rem;
+    }
+
+    .jumbo-custom-bottom {
+        margin: 2rem -3rem;
+        margin-top: 10rem;
+        margin-bottom: 6rem;
+    }
+
+    .h1-custom {
+        font-size: 44px;
+    }
+
+
+    .h2-custom {
+        margin-top: -5rem;
+        margin-bottom: -1rem;
+        font-size: 28px;
+    }
+
+    .card-left {
+        padding-bottom: 1rem;
+    }
+
+    .img-card {
+        padding-bottom: 1rem;
+    }
+
+    .img-card img {
+        width: 300px;
+    }
+
+    .apps {
+        height: 40px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .heading {
+        font-size: 40px;
+    }
+
+    .skills-box {
+        text-align: center;
+    }
+    .skills-box ul > li {
+        padding: 1rem;
+    }
+
+    #contact {
+        margin-top: -4rem;
+        text-align: center;
+    }
+
+    .footer p {
+        padding: 1rem;
+        font-size: 14px;
     }
 
 }
