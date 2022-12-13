@@ -150,9 +150,20 @@ hr {
 - It always shows above the awesome font icon */
 
 .custom-toggler {
-    color: var(--bs-dark);
+    /* color: var(--bs-dark); */
+    position: absolute;
+    top: 0;
+    right: -.7rem;
     margin: 1rem;
     margin-top: .5rem;
+    border: none;
+    /* background-color: transparent; */
+    background-color: #353A3F;
+}
+
+custom-toggler:hover {
+    background-image: none;
+    background-color: #353A3F;
 }
 
 /* this hides them both! */
@@ -168,14 +179,22 @@ hr {
 .custom-toggler-icon {
 
     /* removes lines OK */
-    background-image: none;
+    /* background-image: none; */
+    height: 67px;
+    background-color: #353A3F;
 
     /* removes bg only - not border? */
-    background-color: var(--bs-dark);
+    /* background-color: var(--bs-dark); */
 
     /* do nothing */
     /* border-radius: 0px;
     border: none; */
+}
+
+.custom-toggler span {
+    width: 67px;
+    height: 67px;
+    background-color: #353A3F;
 }
 
 .custom-toggler-icon::before {
@@ -185,13 +204,14 @@ hr {
     /* set colour and size */
     color: var(--light);
     font-size: 40px;
+    background-color: #353A3F;
 }
 
 .custom-toggler-icon:hover {
     /* hide again on hover? Nope */
     /* background-image: none; */
-
-    color: transparent;
+    background-color: #353A3F;
+    /* color: transparent; */
     /* background-color: var(--bs-dark); */
 }
 
@@ -201,6 +221,7 @@ hr {
     justify-content: space-between;
     align-items: center; */
     margin-left: .5rem;
+    background-color: #353A3F;
 }
 
 .custom-nav-item {
