@@ -1,0 +1,53 @@
+.header-hero .container-grid {
+    display: flex;
+    justify-content: center;
+}
+
+/* hero-anim squares */
+
+.bg-grid-container {
+    animation: fadeIn 15s;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 3px;
+    width: 100vw;
+    height: 250px;
+    padding: 2rem;
+    padding-bottom: 4rem;
+    z-index: -1;
+}
+
+.bg-grid-container > * {
+    border: 1px solid var(--bs-black);
+}
+
+.grid-item {
+    width: 4rem;
+    height: 2rem;
+}
+
+#aqua {
+    background-color: var(--highlight);
+    animation: colourFade 2.3s ease alternate infinite;
+}
+
+#peach {
+    background-color: var(--peachy);
+    animation: colourFade 3.5s ease alternate infinite;
+}
+
+#purple {
+    background-color: var(--purps);
+    animation: colourFade 3s ease alternate infinite;
+}
+
+#lumi {
+    background-color: var(--lumi);
+    animation: colourFade 2.8s ease alternate infinite;
+}
+
+.jumbo-custom-bottom {
+    padding-top: 4rem;
+    /* margin: 2rem auto; */
+}

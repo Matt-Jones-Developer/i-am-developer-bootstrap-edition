@@ -18,6 +18,7 @@ I decided to add a call to action button within my header that would allow users
 
 * [Installation](#installation)
 * [Usage](#usage)
+* [Project-Trees](#project-trees)
 * [Bootstrap-Issues](#bootstrap-issues)
 * [UI-Design-Features](#ui-design-features)
 * [Wireframing](#wireframing)
@@ -42,6 +43,23 @@ The link for this repo: https://github.com/Matt-Jones-Developer/i-am-developer-b
 
 *screenshots of the homepage*
 ![This is a screenshot](/assets/images/demo/bootstrap-edition_screenshot.png)
+
+## Project-Trees
+
+I have included level 2 in the directory_tree.txt file.  So you can see the npm installed 'node_modules' bootstrap directory.  It means it's all self contained within the project and doesn't rely on server links to operate.  I had issues with version links too initially, so I feel this is a better way to use BS. 
+
+Level 1:
+
+.
+├── LICENSE
+├── README.md
+├── assets
+├── directory_tree.txt
+├── index.html
+├── node_modules
+├── package-lock.json
+├── package.json
+└── scss
 
 
 ## Bootstrap-Issues
@@ -118,6 +136,21 @@ I feel it's cleaner, more professional than the basic links and confusing amount
 
 I will always include the dist node files and folders in future bootstrapping.
 
+Final thoughts on Bootstrap (post coding):
+
+Whilst I liked the idea of drag and dropping in sections - they didn't seem to work as expected.  I still found myself needing to change the provided code, look up a lot of solutions and add a lot of CSS to style them as I wanted and I feel the responsiveness for this particular layout was worse than my hard-coded version.  
+
+I made sure to test responsiveness for all apple devices in Safari, yet somehow when you manually adjust a browser window- the site will constantly overlap sections and generally look terrible.  I'd like to make a javascript version of the colours-grid hero, as I feel it could be contained and resized more easily and would of helped a lot of issues.
+
+I feel that you would need an incredible amount of BS knowledge to understand how to use it in a professional capacity - I would honestly prefer to code every element myself. Modules I create allow for the same drag and drop, but they'll work as expected. 
+
+Many of the shortcuts such as mb, pt etc would often fail, or be quite finnicky to apply, which caused more CSS and custom styles to be written.
+The documentation said BS5 classes 'just needed new values' and not custom classes, but I ended up using customs for almost all of it due to things not working as expected.
+
+The rows work ok, but I was annoyed by the lack of 'half spaces' in between say col-6 and col-7 - which meant that using CSS grid was a superior option for me.  When you adjust them to fit onto an ipad I had to force the cards to col-12 or full width earlier than if I'd just used flexbox as usual. 
+
+I kept the blue buttons for most of the site apart from the CTA button, since applying my custom-btn class to them didn't work.  I hope to see improvements from BS in the future to make it more enjoyable to use and ready 'out of the box'.
+
 
 ## UI-Design-Features
 
@@ -128,13 +161,14 @@ I will endeavour to include the following goals for this project:
 - Sticky Navbar: DONE
 - GRID of coloured squares: DONE - overcame a lot here, even tried to implement a random(math) function in JS, but it didn't really work and decided to omit it.  I am really happy with how this came out and I will make the colours randomise to random squares once I have a better grasp of JavaScript.
 
-- site is 100% responsive on any device or screen adjustment: DONE 
-- each project image link contains: transparent bg text section layered over the image with intro blurb: DONE
-- Light/Dark switch: TODO
+- site is 100% responsive on any device or screen adjustment: DONE However using Bootstrap it brought additional complications with the hero grid - it seems that each time to reduce the browser window manually, it sends the jumbotron-bottom above/overlapping the grid container.  mb-5 didn't work so I forced to manually set a margin-top for almost every section to compensate.
 
-- main font to be a custom web-font: Decided to add custom fonts only to the gameboy project and to bio-metal in the end.  Very happy with Raleway as the main font to use in my portfolio as it looks clean.
+- each project image link contains: transparent bg text section layered over the image with intro blurb: DONE
+
+- Light/Dark switch: TODO - not enough time again.  But I will!
   
 - make the titles 'spell out' the letters?: TODO
+
 - fading/blending/zooming main background image: Implemented then removed due to Safari causing issues.  Decided that it wasn't necessary especially on mobile views. Good fun figuring it out and working with transition: transform for the first time.  I feel my site already showcases my understanding of CSS animation quite nicely so, 'less is more' as they say.
 
 - animated 'sections' similar to the titles on my bio-page: TODO - I want entire sections to slide in and out as you scroll but I will save for future feature.
@@ -143,20 +177,21 @@ I will endeavour to include the following goals for this project:
 
 - my best work to date (webpages, apps, design, music) with html, css, python etc: DONE (I reluctantly omitted the link to Cristal Vision's website as I currently have it down for maintenance; a lot of bugs written back when I was just starting out!  But all the other links work great.
 
-- homepage (the main back/return to page) has 2 sections (projects + about me)  - went with a single page layout in the end, but I did include smooth scrolling links to each section which work great.
+- homepage (the main back/return to page) has 2 sections (projects + about me)  - went with a single page layout in the end, but I did include smooth scrolling links to each section which work great.  However once again Bootstrap has issues with both smooth scrolling and spyscroll - after a lot of googling I tried several suggestions but the scrolling offsets do not work as expected, therefore the scrolls don't stop at the correct points.  Very annoying I hope they fix this soon.
 
-- navbar has collapsing burger menu for mobile views containing 'projects' 'web development' 'graphic design' and 'about me', CV PDF + 'contact' as another route to call to action: TODO 
+- navbar has collapsing burger menu for mobile views containing 'projects' 'web development' 'graphic design' and 'about me', CV PDF + 'contact' as another route to call to action: DONE - thanks to bootstrap it was a drag and drop - however their example code had errors in it which caused the toggle to fail.  I had to add 'bs' to a lot of the tags such as 'data-bs-toggle' before it would open.  For closing I had to change some of the targets and control sewttings to 'navbarNav' which fixed these issues.
 
-- add my music (which track?) and a Soundcloud widget to turn it on/off: Implemented but removed due to web formatting issues: TODO! I still have a basic link which works just fine.
+- I still have a problem with the toggle since customising it to be 3 white bars only proved impossible.  I didn't like how it looked and wanted to add my own awesome font hamburger. I got that done, tried to hide the BS toggle, which proved infuriating.  I can either hide all the toggles, or the lines and the bg-colour of the bs-toggle only.  There is a constant outline of the original toggle which cannot seem to be removed at all.  Very disappointed and makes me positive I would sooner create my own toggle to begin with. 
 
-- responsive screenshots embedded/skewed into iphone images! - TODO - When you click on a project image, I'd like it to open a page dedicated to how and why the site was made, the issues I overcame and screenshots of it's responsive design in mobile view.
+- responsive screenshots embedded/skewed into iphone images! - When you click on a project image, I'd like it to open a page dedicated to how and why the site was made, the issues I overcame and screenshots of it's responsive design in mobile view. - STILL TODO
 
 ## Wireframing
 
-mockup - here are my wireframes and design mockups I created before coding - I ended up reverting back to the original design to meet the criteria but still included the gameboy slide reel inside my gameboy assets website.
+mockup - here are my wireframes and design mockups I created before coding - I pretty much copied the original idea, but having learned about CTA and the importance of heirachy within your site, I wanted to adjust the hero page to include a large 'hook line' with a Call To Action button.  I think this improved the look of my site.
 
-- layout design - kept it simple and followed the assessment criteria, I wanted to include other information but felt that the brief didn't allow me to do so without changing the criteria. 
-- colour palette - I chose light and dark greys as the main backgrounds, highlighted by aqua.  I wanted to make the colour grid randomise but I ended up using CSS animations to achieve the effect I wanted.  The secondary palette was to complement the gameboy page (you can view my palettes in the design folder)
+- layout design - kept it simple and followed the assessment criteria, I wanted to include other information but felt that the brief didn't allow me to do so without changing the criteria.  Since I wanted a CTA within my hero section, I did not want the about me section cluttering the hero up.  So it was added below in its own section, which allows the site to flow better.
+
+- colour palette - I chose light and dark greys as the main backgrounds, highlighted by aqua.  I used the bs-dark colour and added it to my variable list.  I also added a subtle gradient for the main body background which looks better than the original design.
 
 First design wireframe:
 
