@@ -143,6 +143,16 @@ custom-btn:hover {
     color: var(--highlight);
 }
 
+.navbar-toggler {
+    /* hide bs toggle */
+    background-color: var(--bs-dark);
+    color: var(--bs-dark);
+}
+
+.navbar-toggler:hover {
+    background-color: var(--bs-dark);
+}
+
 .custom-toggler {
     position: absolute;
     top: .4rem;
@@ -150,7 +160,6 @@ custom-btn:hover {
     margin: 1rem;
     margin-top: .5rem;
     border: none;
-    background-color: var(--bs-dark);
 }
 
 custom-toggler:hover {
