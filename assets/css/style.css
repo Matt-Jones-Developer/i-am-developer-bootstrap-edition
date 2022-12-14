@@ -109,7 +109,7 @@ hr {
 
 .h2-custom {
     padding-top: 1rem;
-    padding-bottom: 0;
+    padding-bottom: -1rem;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -351,7 +351,12 @@ custom-toggler:hover {
 
 .heading {
     margin: 1rem;
+    margin-top: 2rem;
     padding-bottom: 2rem;
+}
+
+.text-muted {
+    padding-top: 1rem;
 }
 
 .card {
@@ -414,11 +419,16 @@ custom-toggler:hover {
     margin-bottom: 4rem;
 }
 
+.heading-projects {
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
 /* section - skills */
 
 
 .heading-skills {
-    padding-top: 6rem;
+    padding-top: 4rem;
     padding-bottom: 0;
     padding-left: 1rem;
 }
@@ -479,10 +489,9 @@ custom-toggler:hover {
 
 /* future skills */
 
-.custom-row {
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
+.heading-future {
+    padding: 2rem;
+    margin-top: 1rem;
 }
 
 .custom-card {
@@ -578,6 +587,8 @@ custom-toggler:hover {
 
 .heading-contact {
     padding: 4rem 1rem;
+    margin-top: 1rem;
+    text-align: center;
 }
 
 .custom-text {
@@ -594,7 +605,7 @@ custom-toggler:hover {
 }
 
 .signup label {
-    width: 900px;
+    width: 600px;
 }
 
 .custom-form-label,
@@ -716,10 +727,13 @@ custom-toggler:hover {
     }
 
     /* headings */
-    .heading,
-    .heading-contact {
+    .heading {
         text-align: left;
         padding-bottom: 2rem;
+    }
+
+    .heading-contact {
+        text-align: center;
     }
 
     /* skills */
