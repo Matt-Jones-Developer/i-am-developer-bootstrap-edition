@@ -149,10 +149,6 @@ custom-btn:hover {
     color: var(--bs-dark);
 }
 
-.navbar-toggler:hover {
-    background-color: var(--bs-dark);
-}
-
 .custom-toggler {
     position: absolute;
     top: .4rem;
@@ -500,7 +496,9 @@ custom-toggler:hover {
 
 .heading-future {
     padding: 2rem;
+    padding-top: -2rem;
     margin-top: 1rem;
+    border: 1px solid red;
 }
 
 .custom-card {
@@ -1021,7 +1019,7 @@ custom-toggler:hover {
 
     .heading-future h2 {
         font-size: 44px;
-        margin-top: 2rem;
+        margin-top: .8rem;
     }
     /* contact */
 
